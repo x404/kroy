@@ -74,8 +74,7 @@ ul {
 
 html {
   -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  font-size: 62.5%; }
+  -webkit-text-size-adjust: 100%; }
 
 body {
   display: -webkit-box;
@@ -84,7 +83,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   font-size: 14px;
-  font-size: 1.4rem;
+  font-family: "SegoeUIItalic";
   flex-flow: column;
   font-display: swap;
   height: 100vh; }
@@ -113,9 +112,57 @@ h2 {
 h3 {
   font-size: 1.6rem; }
 
-@font-face {}.tdn {
+.regular {
+  font-family: "SegoeUIRegular"; }
+
+/* font-family: "SegoeUIRegular"; */
+@font-face {
+  font-family: "SegoeUIRegular";
+  src: url("../fonts/SegoeUIRegular/SegoeUIRegular.eot");
+  src: url("../fonts/SegoeUIRegular/SegoeUIRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/SegoeUIRegular/SegoeUIRegular.woff") format("woff"), url("../fonts/SegoeUIRegular/SegoeUIRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
+/* font-family: "SegoeUIBold"; */
+@font-face {
+  font-family: "SegoeUIBold";
+  src: url("../fonts/SegoeUIBold/SegoeUIBold.eot");
+  src: url("../fonts/SegoeUIBold/SegoeUIBold.eot?#iefix") format("embedded-opentype"), url("../fonts/SegoeUIBold/SegoeUIBold.woff") format("woff"), url("../fonts/SegoeUIBold/SegoeUIBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "SegoeUIItalic";
+  src: url("../fonts/SegoeUIItalic/SegoeUIItalic.eot");
+  src: url("../fonts/SegoeUIItalic/SegoeUIItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/SegoeUIItalic/SegoeUIItalic.woff") format("woff"), url("../fonts/SegoeUIItalic/SegoeUIItalic.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
+@font-face {
+  font-family: "SegoeUIBoldItalic";
+  src: url("../fonts/SegoeUIBoldItalic/SegoeUIBoldItalic.eot");
+  src: url("../fonts/SegoeUIBoldItalic/SegoeUIBoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/SegoeUIBoldItalic/SegoeUIBoldItalic.woff") format("woff"), url("../fonts/SegoeUIBoldItalic/SegoeUIBoldItalic.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
+strong,
+.bold {
+  font-weight: normal;
+  font-family: "SegoeUIBold"; }
+
+em, i,
+.italic {
+  font-style: normal;
+  font-family: "SegoeUIItalic"; }
+
+strong em,
+em strong {
+  font-weight: normal;
+  font-family: "SegoeUIBoldItalic"; }
+
+.tdn, .mainnav a {
   text-decoration: none; }
-  .tdn:hover {
+  .tdn:hover, .mainnav a:hover {
     text-decoration: underline; }
 
 .tdu {
@@ -123,45 +170,103 @@ h3 {
   .tdu:hover {
     text-decoration: none; }
 
-.before {
+.before, .advantages__title:before {
   content: "";
   display: block;
   position: absolute; }
 
 .form-control {
-  border: 1px solid #f4f4f4;
+  border: 1px solid #808080;
   border-radius: 0;
   margin-top: 0.6rem;
   font-size: 16px; }
   .form-control:focus, .form-control:active {
-    border-color: #666;
+    border-color: #f5f5f5;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(222, 72, 111, 0.3); }
+
+.text-center {
+  text-align: center; }
+
+.text-right {
+  text-align: right; }
+
+.title {
+  font-size: 24px;
+  color: #2f4f8e;
+  margin-bottom: 20px;
+  text-align: center; }
+
+.flexbox {
+  display: flex; }
+
+.flexboxw {
+  display: flex;
+  flex-wrap: wrap; }
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
 
 /* =header
 ---------------------------*/
+.mainnav {
+  font-size: 18px; }
+  .mainnav .nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 35px; }
+    .mainnav .nav > li {
+      margin-left: 14px;
+      margin-right: 14px; }
+      .mainnav .nav > li > a {
+        color: #808080; }
+    .mainnav .nav .subnav {
+      display: none; }
+
 /* =/header
 ---------------------------*/
 /* =navigation
 ---------------------------*/
 /* =/navigation
 ---------------------------*/
-.owl-carousel .owl-controls {
-  position: absolute;
-  width: 100%;
-  top: 115px; }
-  .owl-carousel .owl-controls .owl-buttons .owl-prev,
-  .owl-carousel .owl-controls .owl-buttons .owl-next {
-    background: url(../images/prevnext.png) no-repeat left top;
-    width: 65px;
-    height: 65px;
-    position: absolute; }
-  .owl-carousel .owl-controls .owl-buttons .owl-prev {
-    left: -110px; }
-  .owl-carousel .owl-controls .owl-buttons .owl-next {
-    right: -110px; }
+.text {
+  padding-top: 10px; }
+  .text p {
+    line-height: 1.8; }
+
+.bg-color {
+  background-color: #f5f5f5; }
 
 /* =main
 ---------------------------*/
+.advantages {
+  background: #f5f5f5;
+  margin-top: 25px;
+  padding-bottom: 20px; }
+  .advantages__title {
+    align-items: center;
+    color: #2f4f8e;
+    display: flex;
+    font-size: 22px;
+    height: 50px;
+    margin-bottom: 10px;
+    padding-left: 67px;
+    position: relative; }
+    .advantages__title:before {
+      background-color: #2f4f8e;
+      border-radius: 5px;
+      height: 50px;
+      width: 50px;
+      left: 0;
+      top: 0; }
+  .advantages__text {
+    padding-right: 35px; }
+  .advantages .cell {
+    margin-top: 22px;
+    padding-left: 20px;
+    width: 33.3%; }
+
 /* =mobile-menu
 ---------------------------*/
 .show-sm,
