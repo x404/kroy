@@ -1,5 +1,13 @@
 $(document).ready(function(){
 
+	$('#home-carousel').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		prevArrow: '<button type="button" class="slick-prev slick-arrow" aria-label="Назад"></button>',
+		nextArrow: '<button type="button" class="slick-next slick-arrow" aria-label="Вперед"></button>',
+		autoplay: false,
+		autoplaySpeed: 4000
+	});
 
 	// mobile-menu
 	$('#navbar').each(function(){

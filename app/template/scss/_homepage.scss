@@ -93,6 +93,66 @@
 	.blue{
 		color: $color4;
 	}
+	img{
+		height: auto;
+		vertical-align: top;
+		width: 100%;
+	}
+	.slide{
+		position: relative;
+	}
+	.action{
+		display: flex;
+		align-items: center;
+		position: absolute;
+		font-size: 18px;
+		width: 236px;
+		height: 272px;
+		background: url(../images/label.png) no-repeat;
+		color: $color2;
+		position: absolute;
+		top: 50%;
+		margin-top: -135px;
+		a{
+			color: currentColor;
+			@extend .tdu;
+		}
+		.more{
+			font-family: 'PalatinoLinotypeItalic';			
+			position: absolute;
+			width: 100%;
+			bottom: 65px;
+		}
+		&__title{
+			text-transform: uppercase;
+			font-family: 'PalatinoLinotype';
+		}
+	}
+
+	.text{
+		background: #f0f0f0;
+		bottom: 0;
+		font-family: 'PalatinoLinotype';
+		height: 66px;
+		padding-left: 60px;
+		padding-right: 25px;
+		position: absolute;
+		right: 0;
+		width: 47%;
+		display: flex;
+		align-items: center;
+		&__inner{
+			max-width: 470px;
+		}
+		&:before{
+			@extend .before;
+			background: url(../images/slider-text-edge.png) no-repeat left top;
+			height: 66px;
+			width: 77px;
+			left: -77px;
+			top: 0;
+		}
+	}
 }
 /* =/carousel
 ---------------------------*/

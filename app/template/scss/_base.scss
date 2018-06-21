@@ -325,14 +325,17 @@ em strong
 	}
 }
 
-.top{
-	font-family: 'PalatinoLinotype';
-}
+
 
 .header{
 	font-family: 'PalatinoLinotype';
+	background: #e8e8e8;
 	font-size: 18px;
-	margin-top: 35px;
+	padding-bottom: 25px;
+	.top{
+		padding-top: 35px;
+		padding-bottom: 35px;
+	}
 	.flexbox{
 		align-items: center;
 	}
@@ -402,7 +405,7 @@ em strong
 	.nav{
 		display: flex;
 		justify-content: space-between;
-		margin-top: 35px;
+		// margin-top: 35px;
 
 		& > li{
 			margin-left: 14px;
@@ -437,7 +440,7 @@ em strong
 
 .content-section{
 	margin: 25px 0 15px;
-	padding: 10px 0 20px;
+	padding: 10px 0;
 	p{
 		line-height: 2;
 	}

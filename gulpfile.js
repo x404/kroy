@@ -57,6 +57,7 @@ gulp.task('compress', function(){
 			gulp.src([  // Берем все необходимые библиотеки
 				config.libsDir + '/jquery/dist/jquery.js',
 				config.libsDir + '/jquery-validation/dist/jquery.validate.js',
+				config.libsDir + '/slick-carousel/slick/slick.min.js',
 				config.templateDir + '/js/util.js',
 				config.templateDir + '/js/tab.js',
 				config.templateDir + '/js/popper.min.js',
