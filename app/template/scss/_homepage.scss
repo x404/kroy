@@ -168,9 +168,9 @@
 ---------------------------*/
 
 
-/* =photogallery
+/* =media
 ---------------------------*/
-.photogallery{
+.media{
 	&__list{
 		display: flex;
 		justify-content: space-around;
@@ -179,21 +179,24 @@
 	&__cell{
 		position: relative;
 	}
-	&__link{
-		color: $color2;
-		display: block;
+	&__inner{
 		height: 165px;
 		overflow: hidden;
 		position: relative;
 		width: 365px;
-		.photogallery__pic{
-			vertical-align: top;
-			transition: .3s;
+	}
+	&__link{
+		color: $color2;
+		display: block;
+		.media__pic{
+			img{
+				vertical-align: top;
+				transition: .3s;
+			}
 		}
 
-		overflow: hidden;
 		&:hover{
-			.photogallery__pic{
+			.media__pic img{
 				filter: brightness(50%);
 				transform: scale(1.1)
 			}
@@ -213,7 +216,7 @@
 .badge{
 	background-color: #2f4f8e ;
 	border-radius: 5px;
-	bottom: -25px;
+	top: 140px;
 	height: 50px;
 	left: 50%;
 	margin-left: -25px;
@@ -237,6 +240,43 @@
 			top: 14px;
 		}
 	}
+	&-list{
+		&:before{
+			@include sprite($icon-list);
+			left: 12px;
+			top: 11px;
+		}
+	}
 }
-/* =/photogallery
+/* =/media
+---------------------------*/
+
+
+/* =news
+---------------------------*/
+.news{
+	&__item{
+		.media__link:hover{
+			.news__more{
+				color: $color4;
+				text-decoration: underline;
+			}
+		}
+	}
+	&__body{
+		background-color: $color9;
+		color: $color3;
+		font-size: 18px;
+		font-family: 'PalatinoLinotype';
+		padding-top: 35px;
+		padding-bottom: 5px;
+		text-align: center;
+	}
+
+	&__more{
+		font-family: 'PalatinoLinotypeItalic';
+		// color: $color4;
+	}
+}
+/* =/news
 ---------------------------*/
