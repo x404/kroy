@@ -17,6 +17,8 @@
     width: 940px; }
   .col-md-3 {
     width: 25%; }
+  .col-md-4 {
+    width: 33.3%; }
   .col-md-6 {
     width: 50%; } }
 
@@ -198,7 +200,7 @@ em strong {
   .tdu:hover, .footer .address a:hover, .footer .kreotif a:hover, .carousel .action a:hover {
     text-decoration: none; }
 
-.before, .sq:before, .header .callback__inner:after, .qcart__inner:after, .qcart__inner:before, .share .container:before, .icon:after, .advantages__title:before, .carousel .text:before {
+.before, .sq:before, .header .callback__inner:after, .qcart__inner:after, .qcart__inner:before, .share .container:before, .icon:after, .advantages__title:before, .carousel .text:before, .badge:before {
   content: "";
   display: block;
   position: absolute; }
@@ -283,14 +285,6 @@ em strong {
   opacity: 1;
   -webkit-transform: scale(1);
   transform: scale(1); }
-
-.effect-bubba {
-  overflow: hidden; }
-  .effect-bubba img {
-    transition: .3s; }
-  .effect-bubba:hover img {
-    filter: brightness(50%);
-    transform: scale(1.1); }
 
 /* =header
 ---------------------------*/
@@ -766,11 +760,23 @@ em strong {
   justify-content: space-around;
   margin: 40px 0 30px; }
 
+.photogallery__cell {
+  position: relative; }
+
 .photogallery__link {
   color: #fff;
-  position: relative; }
-  .photogallery__link img {
-    vertical-align: top; }
+  display: block;
+  height: 165px;
+  overflow: hidden;
+  position: relative;
+  width: 365px;
+  overflow: hidden; }
+  .photogallery__link .photogallery__pic {
+    vertical-align: top;
+    transition: .3s; }
+  .photogallery__link:hover .photogallery__pic {
+    filter: brightness(50%);
+    transform: scale(1.1); }
 
 .photogallery__title {
   font-family: 'PalatinoLinotype';
@@ -780,6 +786,31 @@ em strong {
   top: 0;
   height: 100%;
   width: 100%; }
+
+.badge {
+  background-color: #2f4f8e;
+  border-radius: 5px;
+  bottom: -25px;
+  height: 50px;
+  left: 50%;
+  margin-left: -25px;
+  position: absolute;
+  width: 50px;
+  z-index: 10; }
+  .badge-gal:before {
+    background-image: url(../images/sprite.png);
+    background-position: 0px -66px;
+    width: 27px;
+    height: 22px;
+    left: 11px;
+    top: 14px; }
+  .badge-video:before {
+    background-image: url(../images/sprite.png);
+    background-position: -27px -66px;
+    width: 21px;
+    height: 21px;
+    left: 14px;
+    top: 14px; }
 
 /* =/photogallery
 ---------------------------*/

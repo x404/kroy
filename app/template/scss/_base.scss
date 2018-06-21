@@ -302,19 +302,6 @@ em strong
 }
 
 
-.effect-bubba{
-	overflow: hidden;
-	img{
-		transition: .3s;
-	}
-	&:hover{
-		img{
-			filter: brightness(50%);
-			transform: scale(1.1)
-		}
-	}
-}
-
 
 /* =header
 ---------------------------*/

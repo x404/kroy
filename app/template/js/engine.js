@@ -40,4 +40,12 @@ $(document).ready(function(){
 		}, 800);
 		return false;
 	});
+
+	$('.fancybox-media').fancybox({
+		openEffect  : 'none',
+		closeEffect : 'none',
+		helpers : {
+			media : {}
+		}
+	});
 });
