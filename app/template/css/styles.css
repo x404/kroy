@@ -108,7 +108,8 @@ a {
   color: #020000; }
 
 h1 {
-  font-size: 2.5rem; }
+  font-size: 24px;
+  font-weight: normal; }
 
 h2 {
   font-size: 2.4rem; }
@@ -164,6 +165,28 @@ em strong {
   font-weight: normal;
   font-family: "SegoeUIBoldItalic"; }
 
+@font-face {
+  font-family: 'PalatinoLinotype';
+  src: url("../fonts/PalatinoLinotype/PalatinoLinotype-Roman.woff2") format("woff2"), url("../fonts/PalatinoLinotype/PalatinoLinotype-Roman.woff") format("woff");
+  font-weight: 100;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'PalatinoLinotypeItalic';
+  src: url("../fonts/PalatinoLinotype/PalatinoLinotype-Italic.woff2") format("woff2"), url("../fonts/PalatinoLinotype/PalatinoLinotype-Italic.woff") format("woff"); }
+
+@font-face {
+  font-family: 'PalatinoLinotype';
+  src: url("../fonts/PalatinoLinotype/PalatinoLinotype-Bold.woff2") format("woff2"), url("../fonts/PalatinoLinotype/PalatinoLinotype-Bold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'PalatinoLinotype';
+  src: url("../fonts/PalatinoLinotype/PalatinoLinotype-BoldItalic.woff2") format("woff2"), url("../fonts/PalatinoLinotype/PalatinoLinotype-BoldItalic.woff") format("woff");
+  font-weight: 600;
+  font-style: italic; }
+
 .tdn, .mainnav a {
   text-decoration: none; }
   .tdn:hover, .mainnav a:hover {
@@ -195,6 +218,7 @@ em strong {
   text-align: right; }
 
 .title {
+  font-family: 'PalatinoLinotype';
   font-size: 24px;
   color: #2f4f8e;
   margin-bottom: 20px;
@@ -274,7 +298,11 @@ em strong {
   .slogan span {
     color: #000; }
 
+.top {
+  font-family: 'PalatinoLinotype'; }
+
 .header {
+  font-family: 'PalatinoLinotype';
   font-size: 18px;
   margin-top: 35px; }
   .header .flexbox {
@@ -286,6 +314,7 @@ em strong {
   .header .tel {
     color: #808080; }
   .header .callback {
+    font-family: 'PalatinoLinotypeItalic';
     color: #2f4f8e; }
     .header .callback__inner {
       padding-right: 65px; }
@@ -306,7 +335,8 @@ em strong {
     color: #808080; }
   .qcart .to-cart {
     color: #2f4f8e;
-    border-bottom: 1px dashed; }
+    border-bottom: 1px dashed;
+    font-family: 'PalatinoLinotypeItalic'; }
   .qcart__inner {
     position: relative;
     padding-left: 65px; }
@@ -359,6 +389,7 @@ em strong {
   margin-top: auto;
   position: relative; }
   .footer .slogan {
+    font-family: 'PalatinoLinotype';
     font-size: 20px; }
   .footer .address {
     line-height: 1.8; }
@@ -375,6 +406,7 @@ em strong {
       vertical-align: top; }
   .footer .kreotif {
     background-color: #fff;
+    font-family: 'PalatinoLinotypeItalic';
     border-radius: 5px 5px 0 0;
     color: #666;
     font-size: 16px;
@@ -476,6 +508,7 @@ em strong {
     align-items: center;
     color: #2f4f8e;
     display: flex;
+    font-family: 'PalatinoLinotype';
     font-size: 22px;
     height: 50px;
     margin-bottom: 10px;
@@ -527,6 +560,7 @@ em strong {
     vertical-align: top; }
 
 .photogallery__title {
+  font-family: 'PalatinoLinotype';
   font-size: 18px;
   position: absolute;
   text-align: center;

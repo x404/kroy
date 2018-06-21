@@ -57,6 +57,7 @@
 		align-items: center;
 		color: $color4;
 		display: flex;
+		font-family: 'PalatinoLinotype';
 		font-size: 22px;
 		height: 50px;
 		margin-bottom: 10px;
@@ -124,6 +125,7 @@
 	}
 	&__title{
 		@extend .flex-center;
+		font-family: 'PalatinoLinotype';
 		font-size: 18px;
 		position: absolute;
 		text-align: center;
