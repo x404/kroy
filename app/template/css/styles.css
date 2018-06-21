@@ -195,9 +195,9 @@ em strong {
   .tdn:hover, .mainnav a:hover {
     text-decoration: underline; }
 
-.tdu, .footer .address a, .footer .kreotif a, .carousel .action a {
+.tdu, .footer .address a, .footer .kreotif a, .carousel .action a, .vcard a {
   text-decoration: underline; }
-  .tdu:hover, .footer .address a:hover, .footer .kreotif a:hover, .carousel .action a:hover {
+  .tdu:hover, .footer .address a:hover, .footer .kreotif a:hover, .carousel .action a:hover, .vcard a:hover {
     text-decoration: none; }
 
 .before, .sq:before, .header .callback__inner:after, .qcart__inner:after, .qcart__inner:before, .share .container:before, .icon:after, .advantages__title:before, .carousel .text:before, .badge:before {
@@ -845,6 +845,31 @@ em strong {
 
 /* =/news
 ---------------------------*/
+.map {
+  position: relative; }
+  .map__container {
+    position: relative; }
+
+#ymap {
+  height: 350px; }
+
+.vcard {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: flex;
+  height: 210px;
+  left: 50%;
+  margin-left: -600px;
+  padding-left: 12px;
+  position: absolute;
+  top: 70px;
+  width: 365px;
+  z-index: 10;
+  font-size: 15px; }
+  .vcard a {
+    color: #fff; }
+
 /* =mobile-menu
 ---------------------------*/
 .show-sm,

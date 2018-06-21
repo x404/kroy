@@ -280,3 +280,34 @@
 }
 /* =/news
 ---------------------------*/
+
+
+.map{
+	position: relative;
+	&__container{
+		position: relative;
+	}
+}
+#ymap{
+	height: 350px;
+}
+
+.vcard{
+	align-items: center;
+	background-color: rgba(0,0,0,.5);		
+	color: #fff;
+	display: flex;
+	height: 210px;
+	left: 50%;
+	margin-left: -600px;
+	padding-left: 12px;
+	position: absolute;
+	top: 70px;
+	width: 365px;
+	z-index: 10;
+	font-size: 15px;
+	a{
+		color: $color2;
+		@extend .tdu;
+	}
+}

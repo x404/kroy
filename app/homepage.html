@@ -324,6 +324,19 @@
 	<!-- =map -->
 	<div class="map">
 		<p class="title">Как нас найти</p>
+		<div class="map__container">
+			<div class="vcard">
+				<div class="text">
+					<p>Московская обл., п. Вёшки, </p>
+					<p>ул. Выставочная 53. Офис 12</p>
+					<p>+7 926 102-68-86</p>
+					<p>+7 926 702-68-86</p>
+					<p>офис - <a href="mailto:info@kroy-auto.ru" title="">info@kroy-auto.ru</a></p>
+					<p>для дилеров - <a href="mailto:sales@kroy-auto.ru" title="">sales@kroy-auto.ru</a></p>
+				</div>
+			</div>
+			<div id="ymap"></div>			
+		</div>
 	</div>
 	<!-- =/map -->
 
@@ -443,5 +456,44 @@
 
 <script src="/template/js/engine.js"></script>
 <script src="//yastatic.net/share2/share.js"></script>
+<script src="http://api-maps.yandex.ru/2.1.26/?lang=ru_RU"></script>
+<script>
+var map;
+var myCollection;	
+ymaps.ready(function () {
+	map = new ymaps.Map('ymap', {
+		center: [55.927447, 37.605095],
+		zoom: 16
+	});
+
+    myPlacemark = new ymaps.Placemark(map.getCenter(), {
+        hintContent: 'Собственный значок метки',
+        balloonContent: 'Это красивая метка'
+    }, {
+        // Опции.
+        // Необходимо указать данный тип макета.
+        iconLayout: 'default#image',
+        // Своё изображение иконки метки.
+        iconImageHref: '/template/images/balloon.png',
+        // Размеры метки.
+        iconImageSize: [69, 86],
+        // Смещение левого верхнего угла иконки относительно
+        // её "ножки" (точки привязки).
+        iconImageOffset: [-30, -86]
+    }),
+
+
+	map.behaviors.disable('scrollZoom'); 
+	map.geoObjects.add(myPlacemark);
+
+	map.events.add('click', function onMapClick(e) {
+		if(map.behaviors.isEnabled('scrollZoom')) {
+			map.events.remove('click', onMapClick);
+		} else {
+			map.behaviors.enable(['scrollZoom']);
+		}
+	});
+})
+</script>
 </body>
 </html>
