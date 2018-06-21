@@ -1,0 +1,167 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$icon-cart-name: 'icon-cart';
+$icon-cart-x: 92px;
+$icon-cart-y: 31px;
+$icon-cart-offset-x: -92px;
+$icon-cart-offset-y: -31px;
+$icon-cart-width: 20px;
+$icon-cart-height: 20px;
+$icon-cart-total-width: 112px;
+$icon-cart-total-height: 66px;
+$icon-cart-image: '../images/sprite.png';
+$icon-cart: (92px, 31px, -92px, -31px, 20px, 20px, 112px, 66px, '../images/sprite.png', 'icon-cart', );
+$icon-conveniently-name: 'icon-conveniently';
+$icon-conveniently-x: 66px;
+$icon-conveniently-y: 0px;
+$icon-conveniently-offset-x: -66px;
+$icon-conveniently-offset-y: 0px;
+$icon-conveniently-width: 26px;
+$icon-conveniently-height: 29px;
+$icon-conveniently-total-width: 112px;
+$icon-conveniently-total-height: 66px;
+$icon-conveniently-image: '../images/sprite.png';
+$icon-conveniently: (66px, 0px, -66px, 0px, 26px, 29px, 112px, 66px, '../images/sprite.png', 'icon-conveniently', );
+$icon-education-name: 'icon-education';
+$icon-education-x: 0px;
+$icon-education-y: 0px;
+$icon-education-offset-x: 0px;
+$icon-education-offset-y: 0px;
+$icon-education-width: 36px;
+$icon-education-height: 31px;
+$icon-education-total-width: 112px;
+$icon-education-total-height: 66px;
+$icon-education-image: '../images/sprite.png';
+$icon-education: (0px, 0px, 0px, 0px, 36px, 31px, 112px, 66px, '../images/sprite.png', 'icon-education', );
+$icon-price-name: 'icon-price';
+$icon-price-x: 66px;
+$icon-price-y: 29px;
+$icon-price-offset-x: -66px;
+$icon-price-offset-y: -29px;
+$icon-price-width: 24px;
+$icon-price-height: 27px;
+$icon-price-total-width: 112px;
+$icon-price-total-height: 66px;
+$icon-price-image: '../images/sprite.png';
+$icon-price: (66px, 29px, -66px, -29px, 24px, 27px, 112px, 66px, '../images/sprite.png', 'icon-price', );
+$icon-quality-name: 'icon-quality';
+$icon-quality-x: 92px;
+$icon-quality-y: 0px;
+$icon-quality-offset-x: -92px;
+$icon-quality-offset-y: 0px;
+$icon-quality-width: 20px;
+$icon-quality-height: 31px;
+$icon-quality-total-width: 112px;
+$icon-quality-total-height: 66px;
+$icon-quality-image: '../images/sprite.png';
+$icon-quality: (92px, 0px, -92px, 0px, 20px, 31px, 112px, 66px, '../images/sprite.png', 'icon-quality', );
+$icon-tel-name: 'icon-tel';
+$icon-tel-x: 36px;
+$icon-tel-y: 0px;
+$icon-tel-offset-x: -36px;
+$icon-tel-offset-y: 0px;
+$icon-tel-width: 30px;
+$icon-tel-height: 30px;
+$icon-tel-total-width: 112px;
+$icon-tel-total-height: 66px;
+$icon-tel-image: '../images/sprite.png';
+$icon-tel: (36px, 0px, -36px, 0px, 30px, 30px, 112px, 66px, '../images/sprite.png', 'icon-tel', );
+$icon-time-name: 'icon-time';
+$icon-time-x: 36px;
+$icon-time-y: 30px;
+$icon-time-offset-x: -36px;
+$icon-time-offset-y: -30px;
+$icon-time-width: 30px;
+$icon-time-height: 30px;
+$icon-time-total-width: 112px;
+$icon-time-total-height: 66px;
+$icon-time-image: '../images/sprite.png';
+$icon-time: (36px, 30px, -36px, -30px, 30px, 30px, 112px, 66px, '../images/sprite.png', 'icon-time', );
+$icon-warranty-name: 'icon-warranty';
+$icon-warranty-x: 0px;
+$icon-warranty-y: 31px;
+$icon-warranty-offset-x: 0px;
+$icon-warranty-offset-y: -31px;
+$icon-warranty-width: 27px;
+$icon-warranty-height: 35px;
+$icon-warranty-total-width: 112px;
+$icon-warranty-total-height: 66px;
+$icon-warranty-image: '../images/sprite.png';
+$icon-warranty: (0px, 31px, 0px, -31px, 27px, 35px, 112px, 66px, '../images/sprite.png', 'icon-warranty', );
+$spritesheet-width: 112px;
+$spritesheet-height: 66px;
+$spritesheet-image: '../images/sprite.png';
+$spritesheet-sprites: ($icon-cart, $icon-conveniently, $icon-education, $icon-price, $icon-quality, $icon-tel, $icon-time, $icon-warranty, );
+$spritesheet: (112px, 66px, '../images/sprite.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

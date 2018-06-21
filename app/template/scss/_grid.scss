@@ -20,6 +20,13 @@
 	.container {
 		width: 940px;
 	}
+
+	.col-md-3{
+		width: 25%
+	}
+	.col-md-6{
+		width: 50%
+	}
 }
 
 @media (min-width: 1150px) {

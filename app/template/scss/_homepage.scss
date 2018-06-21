@@ -1,9 +1,58 @@
+.icon{
+	position: relative;
+	&:after{
+		@extend .before;
+		left: 25px;
+		top: 25px;
+	}
+	&-price {
+		&:after{
+			@include sprite($icon-price);
+			margin-left: -12px;
+			margin-top: -13px;
+		}
+	}
+	&-warranty {
+		&:after{
+			@include sprite($icon-warranty);
+			margin-left: -13px;
+			margin-top: -17px;
+		}
+	}
+	&-quality {
+		&:after{
+			@include sprite($icon-quality);
+			margin-left: -10px;
+			margin-top: -15px;
+		}
+	}
+	&-time {
+		&:after{
+			@include sprite($icon-time);
+			margin-left: -15px;
+			margin-top: -15px;
+		}
+	}
+	&-education {
+		&:after{
+			@include sprite($icon-education);
+			margin-left: -18px;
+			margin-top: -15px;
+		}
+	}
+	&-conveniently {
+		&:after{
+			@include sprite($icon-conveniently);
+			margin-left: -13px;
+			margin-top: -15px;
+		}
+	}
+}
+
 .advantages{
 	background: #f5f5f5;
 	margin-top: 25px;
 	padding-bottom: 20px;
-	.flexbox{
-	}
 	&__title{
 		align-items: center;
 		color: $color4;
@@ -34,3 +83,54 @@
 	}
 }
 
+
+/* =carousel
+---------------------------*/
+.carousel{
+	font-size: 18px;
+	color: $color3;
+	.blue{
+		color: $color4;
+	}
+}
+/* =/carousel
+---------------------------*/
+
+
+/* =brands
+---------------------------*/
+.brands{
+	background-color: $color7;
+	padding: 32px 0;
+}
+/* =/brands
+---------------------------*/
+
+
+/* =photogallery
+---------------------------*/
+.photogallery{
+	&__list{
+		display: flex;
+		justify-content: space-around;
+		margin: 40px 0 30px;
+	}
+	&__link{
+		color: $color2;
+		position: relative;
+		img{
+			vertical-align: top;
+		}
+	}
+	&__title{
+		@extend .flex-center;
+		font-size: 18px;
+		position: absolute;
+		text-align: center;
+		top: 0;
+		height: 100%;
+		width: 100%;
+	}
+}
+/* =/photogallery
+---------------------------*/
