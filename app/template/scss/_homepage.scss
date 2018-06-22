@@ -52,7 +52,7 @@
 .advantages{
 	background: #f5f5f5;
 	margin-top: 25px;
-	padding-bottom: 20px;
+	padding-bottom: 10px;
 	&__title{
 		align-items: center;
 		color: $color4;
@@ -60,7 +60,7 @@
 		font-family: 'PalatinoLinotype';
 		font-size: 22px;
 		height: 50px;
-		margin-bottom: 10px;
+		margin-bottom: 17px;
 		padding-left: 67px;
 		position: relative;
 		&:before{
@@ -74,12 +74,13 @@
 		}
 	}
 	&__text{
-		// margin-top: 15px;
+		line-height: 1.6;
+		padding-left: 7px;
 		padding-right: 35px;
 	}
 	.cell{
-		margin-top: 22px;
-		padding-left: 20px;
+		margin: 22px 0 11px;
+		padding-left: 25px;
 		width: 33.3%;
 	}
 }
@@ -162,7 +163,7 @@
 ---------------------------*/
 .brands{
 	background-color: $color7;
-	padding: 32px 0;
+	padding: 20px 0;
 }
 /* =/brands
 ---------------------------*/
@@ -282,7 +283,7 @@
 			align-items: center;
 		}
 		.left{
-			padding: 0 15px;
+			padding-right: 15px;
 			img{
 				border-radius: 18px;
 				vertical-align: top;
@@ -330,6 +331,9 @@
 /* =news
 ---------------------------*/
 .news{
+	&__list{
+		margin-bottom: 0;
+	}
 	&__item{
 		.media__link:hover{
 			.news__more{
@@ -337,6 +341,9 @@
 				text-decoration: underline;
 			}
 		}
+	}
+	&__title{
+		color: currentColor;
 	}
 	&__body{
 		background-color: $color9;
@@ -350,7 +357,6 @@
 
 	&__more{
 		font-family: 'PalatinoLinotypeItalic';
-		// color: $color4;
 	}
 }
 /* =/news
@@ -394,6 +400,7 @@
 .catalog{
 	.flexbox{
 		@extend .flexboxw;
+		justify-content: space-around;
 	}
 }
 .card{
@@ -459,6 +466,7 @@
 		background-color: rgba(255,255,255,.7);
 		border-radius: 15px;
 		color: $color10;
+		line-height: 1.5;
 		margin-left: 10px;
 		margin-right: 10px;
 		padding: 5px 8px;
@@ -468,7 +476,7 @@
 	&__price{
 		@extend .flex-center;
 		background-color: $color4;
-		border-radius: 10px;
+		border-radius: 16px;
 		color: $color2;
 		font-family: 'PalatinoLinotype';
 		font-size: 18px;

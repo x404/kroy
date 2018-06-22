@@ -221,6 +221,13 @@ em strong {
     border-color: #f5f5f5;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(222, 72, 111, 0.3); }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0); }
+
 .text-center {
   text-align: center; }
 
@@ -301,18 +308,18 @@ em strong {
     color: #000; }
 
 .header {
-  font-family: 'PalatinoLinotype';
   background: #e8e8e8;
+  font-family: 'PalatinoLinotype';
   font-size: 18px;
-  padding-bottom: 25px; }
+  padding-bottom: 22px; }
   .header .top {
-    padding-top: 35px;
-    padding-bottom: 35px; }
+    padding: 37px 0 35px; }
   .header .flexbox {
     align-items: center; }
   .header a {
     text-decoration: none; }
   .header .slogan {
+    line-height: 1;
     font-size: 24px; }
   .header .tel {
     color: #808080; }
@@ -358,8 +365,6 @@ em strong {
     justify-content: space-between; }
     .mainnav .nav > li {
       border-bottom: 1px dashed rgba(47, 79, 142, 0);
-      margin-left: 14px;
-      margin-right: 14px;
       position: relative; }
       .mainnav .nav > li > a {
         color: #808080; }
@@ -411,7 +416,7 @@ em strong {
   margin: 25px 0 15px;
   padding: 10px 0; }
   .content-section p {
-    line-height: 2; }
+    line-height: 1.8; }
 
 .bg-color {
   background-color: #f5f5f5; }
@@ -496,6 +501,13 @@ em strong {
 
 .tab-content > .active {
   display: block; }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0); }
 
 /* Slider */
 .slick-slider {
@@ -712,7 +724,7 @@ em strong {
 .advantages {
   background: #f5f5f5;
   margin-top: 25px;
-  padding-bottom: 20px; }
+  padding-bottom: 10px; }
   .advantages__title {
     align-items: center;
     color: #2f4f8e;
@@ -720,7 +732,7 @@ em strong {
     font-family: 'PalatinoLinotype';
     font-size: 22px;
     height: 50px;
-    margin-bottom: 10px;
+    margin-bottom: 17px;
     padding-left: 67px;
     position: relative; }
     .advantages__title:before {
@@ -731,10 +743,12 @@ em strong {
       left: 0;
       top: 0; }
   .advantages__text {
+    line-height: 1.6;
+    padding-left: 7px;
     padding-right: 35px; }
   .advantages .cell {
-    margin-top: 22px;
-    padding-left: 20px;
+    margin: 22px 0 11px;
+    padding-left: 25px;
     width: 33.3%; }
 
 /* =carousel
@@ -799,7 +813,7 @@ em strong {
 ---------------------------*/
 .brands {
   background-color: #f0f0f0;
-  padding: 32px 0; }
+  padding: 20px 0; }
 
 /* =/brands
 ---------------------------*/
@@ -896,7 +910,7 @@ em strong {
   .reason .tab-content .flexbox {
     align-items: center; }
   .reason .tab-content .left {
-    padding: 0 15px; }
+    padding-right: 15px; }
     .reason .tab-content .left img {
       border-radius: 18px;
       vertical-align: top; }
@@ -927,9 +941,15 @@ em strong {
 ---------------------------*/
 /* =news
 ---------------------------*/
+.news__list {
+  margin-bottom: 0; }
+
 .news__item .media__link:hover .news__more {
   color: #2f4f8e;
   text-decoration: underline; }
+
+.news__title {
+  color: currentColor; }
 
 .news__body {
   background-color: #f6f6f6;
@@ -972,6 +992,9 @@ em strong {
 
 /* =catalog
 ---------------------------*/
+.catalog .flexbox {
+  justify-content: space-around; }
+
 .card__item {
   margin-bottom: 35px;
   width: 265px; }
@@ -1023,6 +1046,7 @@ em strong {
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 15px;
   color: #333;
+  line-height: 1.5;
   margin-left: 10px;
   margin-right: 10px;
   padding: 5px 8px;
@@ -1030,7 +1054,7 @@ em strong {
 
 .card__price {
   background-color: #2f4f8e;
-  border-radius: 10px;
+  border-radius: 16px;
   color: #fff;
   font-family: 'PalatinoLinotype';
   font-size: 18px;

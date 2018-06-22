@@ -207,6 +207,14 @@ em strong
 }
 
 
+.visually-hidden{
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+}
+
 .text-center{
 	text-align: center;
 }
@@ -317,13 +325,12 @@ em strong
 
 
 .header{
-	font-family: 'PalatinoLinotype';
 	background: #e8e8e8;
+	font-family: 'PalatinoLinotype';
 	font-size: 18px;
-	padding-bottom: 25px;
+	padding-bottom: 22px;
 	.top{
-		padding-top: 35px;
-		padding-bottom: 35px;
+		padding: 37px 0 35px;
 	}
 	.flexbox{
 		align-items: center;
@@ -332,6 +339,7 @@ em strong
 		text-decoration: none;
 	}
 	.slogan{
+		line-height: 1;
 		font-size: 24px;
 	}
 
@@ -343,6 +351,7 @@ em strong
 		color: $color4;
 		&__inner{
 			padding-right: 65px;
+			// padding-top: 8px;
 			&:before{
 				left: auto;
 				right: 0;
@@ -398,8 +407,8 @@ em strong
 
 		& > li{
 			border-bottom: 1px dashed rgba(47,79,142,0);
-			margin-left: 14px;
-			margin-right: 14px;
+			// margin-left: 14px;
+			// margin-right: 14px;
 			position: relative;
 			& > a{
 				color: $color3;
@@ -485,7 +494,7 @@ em strong
 	margin: 25px 0 15px;
 	padding: 10px 0;
 	p{
-		line-height: 2;
+		line-height: 1.8;
 	}
 }
 
@@ -601,4 +610,12 @@ em strong
 	> .active {
 		display: block;
 	}
+}
+
+.visually-hidden{
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
 }
