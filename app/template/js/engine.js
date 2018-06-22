@@ -41,7 +41,7 @@ $(document).ready(function(){
 		return false;
 	});
 
-	$('.fancybox-media').fancybox({
+	$('.fancybox-media, .fancybox').fancybox({
 		openEffect  : 'none',
 		closeEffect : 'none',
 		helpers : {

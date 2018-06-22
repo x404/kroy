@@ -252,6 +252,81 @@
 ---------------------------*/
 
 
+
+
+/* = reason
+---------------------------*/
+.reason{
+	.nav{
+		display: flex;
+		font-family: 'PalatinoLinotype';
+		justify-content: center;
+		font-size: 18px;
+		a{
+			display: inline-block;
+			border-bottom: 1px dashed rgba(47,79,142,0);
+			color: $color3;
+			margin-left: 16px;
+			margin-right: 16px;
+			text-decoration: none;
+			&.active{
+				border-bottom: 1px dashed;
+				color: $color4;
+			}
+		}
+	}
+	.tab-content{
+		padding: 0 20px;
+		margin-top: 40px;
+		.flexbox{
+			align-items: center;
+		}
+		.left{
+			padding: 0 15px;
+			img{
+				border-radius: 18px;
+				vertical-align: top;
+			}
+			.pic{
+				position: relative;
+				.more{
+					bottom: 0;
+					margin: 0;
+					position: absolute;
+					right: 0;
+					a{
+						display: block;
+						background: url(../images/more.png) no-repeat left top;
+						height: 52px;
+						width: 92px;
+						&:after{
+							@extend .before;
+							background: url(../images/more.png) no-repeat left -52px;
+							height: 52px;
+							opacity: 0;
+							transition: .3s opacity;
+							width: 92px;
+						}
+						&:hover{
+							&:after{
+								opacity: 1;
+							}
+						}
+					}
+				}
+			}
+		}
+		.right{
+			padding: 0 15px;
+		}
+	}
+}
+/* =/ reason
+---------------------------*/
+
+
+
+
 /* =news
 ---------------------------*/
 .news{

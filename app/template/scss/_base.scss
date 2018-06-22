@@ -67,9 +67,9 @@ input::-moz-focus-inner{
 /*** standart classes *****/
 p{}
 a{color:#020000}
-h1{font-size:24px; font-weight: normal;}
-h2{font-size:2.4rem}
-h3{font-size:1.6rem}
+h1{font-family: 'PalatinoLinotype'; font-size:24px; font-weight: normal;}
+h2{font-family: 'PalatinoLinotype'; font-size:24px; font-weight: normal; color: $color4;}
+h3{font-family: 'PalatinoLinotype'; font-size:18px; font-weight: normal; color: $color4;}
 
 .regular{
 	font-family: "SegoeUIRegular";	
@@ -419,9 +419,11 @@ em strong
 ---------------------------*/
 
 
+.reason,
 .text{
 	p{
-		line-height: 2;
+		line-height: 1.7;
+		margin: 10px 0;
 	}
 }
 
@@ -536,4 +538,14 @@ em strong
 
 .ya-share2{
 	margin-top: 20px;
+}
+
+
+.tab-content {
+	> .tab-pane {
+		display: none;
+	}
+	> .active {
+		display: block;
+	}
 }
