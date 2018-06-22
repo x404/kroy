@@ -386,3 +386,99 @@
 		@extend .tdu;
 	}
 }
+
+
+
+/* =catalog
+---------------------------*/
+.catalog{
+	.flexbox{
+		@extend .flexboxw;
+	}
+}
+.card{
+	&__item{
+		margin-bottom: 35px;
+		width: 265px;
+		a{
+			display: block;
+			text-decoration: none;
+			&:hover{
+				.card{
+					&__desc{
+						background-color: #fff;
+					}
+				}
+				.more:after{
+					opacity: 1;
+				}
+			}
+		}
+
+		.more{
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			display: block;
+			background: url(../images/more.png) no-repeat left top;
+			height: 52px;
+			width: 92px;
+			&:after{
+				@extend .before;
+				background: url(../images/more.png) no-repeat left -52px;
+				height: 52px;
+				opacity: 0;
+				transition: .3s opacity;
+				width: 92px;
+			}
+		}
+	}
+	&__title{
+		font-family: 'PalatinoLinotypeItalic';
+		font-size: 18px;
+		color: $color4;
+		margin-bottom: 10px;
+	}
+	&__plate{
+		position: relative;
+		height: 335px;
+		width: 265px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		padding-bottom: 8px;
+	}
+	&__thumb{
+		border-radius: 15px;
+		left: 0;
+		position: absolute;
+		top: 0;
+		z-index: -1;
+	}
+	&__desc{
+		background-color: rgba(255,255,255,.7);
+		border-radius: 15px;
+		color: $color10;
+		margin-left: 10px;
+		margin-right: 10px;
+		padding: 5px 8px;
+		transition: .3s background-color;
+	}
+
+	&__price{
+		@extend .flex-center;
+		background-color: $color4;
+		border-radius: 10px;
+		color: $color2;
+		font-family: 'PalatinoLinotype';
+		font-size: 18px;
+		height: 32px;
+		margin-left: 8px;
+		margin-top: 15px;
+		text-align: center;
+		width: 168px;
+	}
+
+}
+/* =/ catalog
+---------------------------*/
