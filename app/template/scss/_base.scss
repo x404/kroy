@@ -407,9 +407,8 @@ em strong
 
 		& > li{
 			border-bottom: 1px dashed rgba(47,79,142,0);
-			// margin-left: 14px;
-			// margin-right: 14px;
 			position: relative;
+			white-space: nowrap;
 			& > a{
 				color: $color3;
 				&:hover{

@@ -107,9 +107,19 @@
 	</header>
 	<!-- =/header -->
 	
+	<!-- =carousel -->
+	<div class="innercarousel">
+		<div class="text"><p>Модельные авточехлы из экокожи на любой автомобиль</p></div>
+		<div id="inner-carousel">
+			<div><img data-lazy="/images/innerslider/slide-1.jpg" alt=""></div>
+			<div><img data-lazy="/images/innerslider/slide-2.jpg" alt=""></div>
+			<div><img data-lazy="/images/innerslider/slide-3.jpg" alt=""></div>
+		</div>
+	</div>
+	<!-- =/carousel -->	
+	
 	<!-- TemplateBeginEditable name="EditRegion3" -->
-	<!-- TemplateEndEditable -->	
-
+	<!-- TemplateEndEditable -->
 	<!-- =share -->
 	<div class="share">
 		<div class="container text-center">

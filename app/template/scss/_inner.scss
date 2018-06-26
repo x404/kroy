@@ -1,0 +1,47 @@
+.main{
+	margin-top: 25px;
+	h1.title{
+		text-transform: uppercase;
+	}
+	ul{
+		margin-left: 10px;
+		li{
+			margin: 5px 0;
+			position: relative;
+			&:before{
+				@extend .before;
+				content: "-";
+				display: block;
+				position: absolute;
+				left: -10px;
+				top: 1px;
+			}
+		}
+	}
+}
+
+.innercarousel{
+	position: relative;
+	img{
+		height: auto;
+		width: 100%;
+	}
+	.text{
+		@extend .flex-center;
+		color: $color2;
+		display: flex;
+		font-family: 'PalatinoLinotypeRegular';
+		font-size: 27px;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		text-align: center;
+		top: 0;
+		width: 100%;
+		z-index: 10;
+		p{
+			background: rgba(47, 79, 142, .55);
+			padding: 10px 55px;
+		}
+	}
+}

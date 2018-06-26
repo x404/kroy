@@ -248,6 +248,13 @@
 			top: 11px;
 		}
 	}
+	&-house{
+		&:before{
+			@include sprite($icon-house);
+			left: 11px;
+			top: 11px;
+		}
+	}
 }
 /* =/media
 ---------------------------*/

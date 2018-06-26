@@ -9,6 +9,19 @@ $(document).ready(function(){
 		autoplaySpeed: 4000
 	});
 
+	$('#inner-carousel').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		prevArrow: '',
+		nextArrow: '',
+		autoplay: true,
+		autoplaySpeed: 4000,
+		fade: true,
+		cssEase: 'linear',
+		lazyLoad: 'ondemand',
+	});
+
+
 	// mobile-menu
 	$('#navbar').each(function(){
 		var $this = $(this),
