@@ -3,10 +3,16 @@
 	h1.title{
 		text-transform: uppercase;
 	}
+	h3{
+		margin: 10px 0;
+	}
 	ul{
 		margin-left: 10px;
+		margin-top: 10px;
+		margin-bottom: 10px;
 		li{
-			margin: 5px 0;
+			line-height: 1.8;
+			// margin: 3px 0;
 			position: relative;
 			&:before{
 				@extend .before;
@@ -18,10 +24,28 @@
 			}
 		}
 	}
+
+	.media{
+		&__list{
+			margin-bottom: 50px;
+			&-wrap{
+				margin-bottom: -20px;
+			}
+		}
+	}
+}
+
+.photos{
+	.media{
+		&__cell{
+			margin-bottom: 40px;
+		}
+	}
 }
 
 .innercarousel{
 	position: relative;
+	min-height: 100px;
 	img{
 		height: auto;
 		width: 100%;
@@ -44,4 +68,44 @@
 			padding: 10px 55px;
 		}
 	}
+}
+
+
+.pagination{
+	position: relative;
+	text-align: center;
+	font-family: 'PalatinoLinotypeRegular';
+	font-size: 18px;
+	padding-top: 15px;
+	margin-bottom: -18px;
+	margin-top: 25px;
+	&:before{
+		@extend .before;
+		background-image: linear-gradient(to right, #fff 0%, #97a7c6 50%, #97a7c6 51%, #fff 100%);
+		top: 0;
+		height: 1px;
+		left: 0;
+		width: 100%;
+	}
+
+	ul{
+		display: flex;
+		justify-content: center;
+		margin: 0;
+
+		li{
+			margin: 0 5px;
+			a{
+				color: #666;
+				text-decoration: none;
+			}
+			&:before{
+				display: none;
+			}
+			.current{
+				color: $color4;
+				text-decoration: underline;
+			}
+		}
+	}	
 }

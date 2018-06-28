@@ -1062,7 +1062,8 @@ em strong {
         top: 1px; }
 
 .innercarousel {
-  position: relative; }
+  position: relative;
+  min-height: 100px; }
   .innercarousel img {
     height: auto;
     width: 100%; }

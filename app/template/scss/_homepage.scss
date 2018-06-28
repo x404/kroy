@@ -176,7 +176,20 @@
 		display: flex;
 		justify-content: space-around;
 		margin: 40px 0 30px;
+		&-wrap{
+			flex-wrap: wrap;
+			margin-bottom: 0;
+			.media__cell{
+				margin-bottom: 78px;
+			}			
+		}
 	}
+
+	&__half &__inner{
+		width: 565px;
+	}
+
+
 	&__cell{
 		position: relative;
 	}
@@ -244,6 +257,13 @@
 	&-list{
 		&:before{
 			@include sprite($icon-list);
+			left: 12px;
+			top: 11px;
+		}
+	}
+	&-list2{
+		&:before{
+			@include sprite($icon-list2);
 			left: 12px;
 			top: 11px;
 		}
