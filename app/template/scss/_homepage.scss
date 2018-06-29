@@ -181,7 +181,11 @@
 			margin-bottom: 0;
 			.media__cell{
 				margin-bottom: 78px;
-			}			
+			}
+			.news__item{
+				margin-bottom: 40px;
+				min-height: 208px;
+			}
 		}
 	}
 
@@ -371,14 +375,17 @@
 	}
 	&__title{
 		color: currentColor;
+		flex-grow: 1;
 	}
 	&__body{
 		background-color: $color9;
 		color: $color3;
-		font-size: 18px;
+		display: flex;
+		flex-direction: column;
 		font-family: 'PalatinoLinotype';
-		padding-top: 35px;
-		padding-bottom: 5px;
+		font-size: 18px;
+		max-width: 365px;
+		padding: 35px 10px 5px;
 		text-align: center;
 	}
 
