@@ -1095,6 +1095,24 @@ em strong {
 
 /* =/ catalog
 ---------------------------*/
+.btn {
+  background: #a8a8a8;
+  border-radius: 32px;
+  border: none;
+  color: #fff;
+  font-family: "SegoeUIItalic";
+  height: 32px;
+  width: 185px;
+  cursor: pointer; }
+
+header.flexbox {
+  align-items: center;
+  margin-bottom: 25px; }
+  header.flexbox .title {
+    flex-grow: 1;
+    padding-left: 185px;
+    margin-bottom: 0; }
+
 .main {
   margin-top: 25px; }
   .main h1.title {
@@ -1401,6 +1419,19 @@ em strong {
                   text-decoration: underline; }
     #navbar .nav-tabs > li {
       margin: 0; } }
+
+.faq__item {
+  background: #f5f5f5;
+  margin-bottom: 25px;
+  padding: 10px 8px 10px; }
+
+.faq__title {
+  font-family: 'PalatinoLinotype';
+  margin-top: 0 !important;
+  margin-bottom: 5px !important; }
+
+.faq__answer {
+  line-height: 1.8; }
 
 .fade {
   opacity: 0;

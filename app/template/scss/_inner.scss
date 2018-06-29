@@ -1,3 +1,25 @@
+.btn{
+	background: #a8a8a8;
+	border-radius: 32px;
+	border: none;
+	color: $color2;
+	font-family: "SegoeUIItalic";
+	height: 32px;
+	width: 185px;
+	cursor: pointer;
+}
+
+
+header.flexbox{
+	align-items: center;
+	margin-bottom: 25px;
+	.title{
+		flex-grow: 1;
+		padding-left: 185px;
+		margin-bottom: 0;
+	}
+}
+
 .main{
 	margin-top: 25px;
 	h1.title{
@@ -12,7 +34,6 @@
 		margin-bottom: 10px;
 		li{
 			line-height: 1.8;
-			// margin: 3px 0;
 			position: relative;
 			&:before{
 				@extend .before;
@@ -116,3 +137,4 @@
 		margin-bottom: 38px;
 	}
 }
+

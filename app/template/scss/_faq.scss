@@ -1,0 +1,15 @@
+.faq{
+	&__item{
+		background: $color5;
+		margin-bottom: 25px;
+		padding: 10px 8px 10px;
+	}
+	&__title{
+		font-family: 'PalatinoLinotype';
+		margin-top: 0 !important;
+		margin-bottom: 5px !important;
+	}
+	&__answer{
+		line-height: 1.8;
+	}
+}
