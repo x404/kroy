@@ -1173,6 +1173,9 @@ em strong {
         color: #2f4f8e;
         text-decoration: underline; }
 
+.actions .media__cell {
+  margin-bottom: 38px; }
+
 /* =mobile-menu
 ---------------------------*/
 .show-sm,
