@@ -1,0 +1,60 @@
+.page-error{
+	.container{
+		background: url(../images/bg404.jpg) no-repeat right 90px top 50px;	
+		min-height: 600px;
+		position: relative;
+		margin-bottom: 80px;
+	}
+	.error__text{
+		background-image: linear-gradient(to right, rgba(47, 79, 142, .55) 0%, rgba(47, 79, 142, .55) 70%, rgba(47, 79, 142, .35) 80%, rgba(47, 79, 142, 0) 100%);
+		color: $color2;
+		font-family: 'PalatinoLinotype';
+		font-size: 18px;
+		margin-top: 120px;
+		padding: 20px 20px;
+		text-transform: uppercase;
+	}
+
+	.error{
+		&__box{
+			background: url(../images/bigarrow.png) no-repeat right top;
+			padding: 80px 110px 0 20px;
+			top: 245px;
+			p{
+				padding-left: 30px;
+			}
+		}
+		&__back{
+			padding-left: 170px;
+			top: 560px;
+			.btn{
+				margin-left: 10px;
+			}
+			&:after{
+				@extend .before;
+				background: url(../images/bigarrow.png) no-repeat right top;
+				height: 77px;
+				right: -245px;
+				top: -22px;
+				transform: rotate(180deg);
+				width: 229px;
+			}
+		}
+		&__box,
+		&__back{
+			position: absolute;
+			font-size: 18px;
+			.btn{
+				font-size: 14px;
+			}
+		}
+
+	}
+
+	.group_btn{
+		margin-top: 35px;
+		.btn{
+			margin-right: 15px;
+		}
+	}
+}

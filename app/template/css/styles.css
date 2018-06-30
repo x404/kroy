@@ -197,9 +197,9 @@ em strong {
   font-weight: 600;
   font-style: italic; }
 
-.tdn, .mainnav a, .mainnav .nav .subnav ul a {
+.tdn, .mainnav a, .mainnav .nav .subnav ul a, .main .contacts p a {
   text-decoration: none; }
-  .tdn:hover, .mainnav a:hover, .mainnav .nav .subnav ul a:hover {
+  .tdn:hover, .mainnav a:hover, .mainnav .nav .subnav ul a:hover, .main .contacts p a:hover {
     text-decoration: underline; }
 
 .tdu, .footer .address a, .footer .kreotif a, .carousel .action a, .vcard a {
@@ -207,7 +207,7 @@ em strong {
   .tdu:hover, .footer .address a:hover, .footer .kreotif a:hover, .carousel .action a:hover, .vcard a:hover {
     text-decoration: none; }
 
-.before, .sq:before, .header .callback__inner:after, .qcart__inner:after, .qcart__inner:before, .share .container:before, .icon:after, .advantages__title:before, .carousel .text:before, .badge:before, .reason .tab-content .left .pic .more a:after, .card__item .more:after, .main ul li:before, .pagination:before {
+.before, .sq:before, .header .callback__inner:after, .qcart__inner:after, .qcart__inner:before, .share .container:before, .icon:after, .advantages__title:before, .carousel .text:before, .badge:before, .reason .tab-content .left .pic .more a:after, .card__item .more:after, .main ul li:before, .pagination:before, .page-error .error__back:after {
   content: "";
   display: block;
   position: absolute; }
@@ -723,7 +723,6 @@ em strong {
     margin-top: -15px; }
 
 .advantages {
-  background: #f5f5f5;
   margin-top: 25px;
   padding-bottom: 10px; }
   .advantages__title {
@@ -1096,14 +1095,21 @@ em strong {
 /* =/ catalog
 ---------------------------*/
 .btn {
+  align-items: center;
   background: #a8a8a8;
   border-radius: 32px;
   border: none;
   color: #fff;
+  cursor: pointer;
+  display: inline-flex;
   font-family: "SegoeUIItalic";
   height: 32px;
-  width: 185px;
-  cursor: pointer; }
+  justify-content: center;
+  text-decoration: none;
+  transition: .3s background-color;
+  width: 185px; }
+  .btn:hover {
+    background-color: #2f4f8e; }
 
 header.flexbox {
   align-items: center;
@@ -1194,6 +1200,32 @@ header.flexbox {
 .actions .media__cell {
   margin-bottom: 38px; }
 
+/* =statistics
+---------------------------*/
+.statistics {
+  margin: 30px 0 40px;
+  color: #666;
+  font-family: 'PalatinoLinotype';
+  text-align: center; }
+  .statistics .flexboxw, .statistics .catalog .flexbox, .catalog .statistics .flexbox {
+    justify-content: space-around; }
+  .statistics__cell {
+    background: #f6f6f6;
+    border: 1px solid #e5e5e5;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    justify-content: space-between;
+    margin-top: 15px;
+    padding: 3px 0 7px;
+    width: 22%; }
+  .statistics__cifr {
+    font-size: 48px; }
+  .statistics__title {
+    font-size: 22px; }
+
+/* =/statistics
+---------------------------*/
 /* =mobile-menu
 ---------------------------*/
 .show-sm,
@@ -1432,6 +1464,62 @@ header.flexbox {
 
 .faq__answer {
   line-height: 1.8; }
+
+.main .contacts {
+  justify-content: space-between;
+  margin-bottom: 35px; }
+  .main .contacts__title {
+    margin-bottom: 5px; }
+  .main .contacts p {
+    line-height: 1.6; }
+    .main .contacts p a {
+      color: #2f4f8e; }
+
+.page-error .container {
+  background: url(../images/bg404.jpg) no-repeat right 90px top 50px;
+  min-height: 600px;
+  position: relative;
+  margin-bottom: 80px; }
+
+.page-error .error__text {
+  background-image: linear-gradient(to right, rgba(47, 79, 142, 0.55) 0%, rgba(47, 79, 142, 0.55) 70%, rgba(47, 79, 142, 0.35) 80%, rgba(47, 79, 142, 0) 100%);
+  color: #fff;
+  font-family: 'PalatinoLinotype';
+  font-size: 18px;
+  margin-top: 120px;
+  padding: 20px 20px;
+  text-transform: uppercase; }
+
+.page-error .error__box {
+  background: url(../images/bigarrow.png) no-repeat right top;
+  padding: 80px 110px 0 20px;
+  top: 245px; }
+  .page-error .error__box p {
+    padding-left: 30px; }
+
+.page-error .error__back {
+  padding-left: 170px;
+  top: 560px; }
+  .page-error .error__back .btn {
+    margin-left: 10px; }
+  .page-error .error__back:after {
+    background: url(../images/bigarrow.png) no-repeat right top;
+    height: 77px;
+    right: -245px;
+    top: -22px;
+    transform: rotate(180deg);
+    width: 229px; }
+
+.page-error .error__box, .page-error .error__back {
+  position: absolute;
+  font-size: 18px; }
+  .page-error .error__box .btn, .page-error .error__back .btn {
+    font-size: 14px; }
+
+.page-error .group_btn {
+  margin-top: 35px; }
+  .page-error .group_btn .btn {
+    margin-right: 15px; }
 
 .fade {
   opacity: 0;

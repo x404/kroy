@@ -1,12 +1,20 @@
 .btn{
+	align-items: center;
 	background: #a8a8a8;
 	border-radius: 32px;
 	border: none;
 	color: $color2;
+	cursor: pointer;
+	display: inline-flex;
 	font-family: "SegoeUIItalic";
 	height: 32px;
+	justify-content: center;
+	text-decoration: none;
+	transition: .3s background-color;
 	width: 185px;
-	cursor: pointer;
+	&:hover{
+		background-color: $color4
+	}
 }
 
 
@@ -138,3 +146,35 @@ header.flexbox{
 	}
 }
 
+
+
+/* =statistics
+---------------------------*/
+.statistics{
+	margin: 30px 0 40px;
+	color: $color8;
+	font-family: 'PalatinoLinotype';
+	text-align: center;
+	.flexboxw{
+		justify-content: space-around;
+	}
+	&__cell{
+		background: $color9;
+		border: 1px solid $color11;
+		display: flex;
+		flex-direction: column;
+		height: 200px;
+		justify-content: space-between;
+		margin-top: 15px;
+		padding: 3px 0 7px;
+		width: 22%;
+	}
+	&__cifr{
+		font-size: 48px;
+	}
+	&__title{
+		font-size: 22px;
+	}
+}
+/* =/statistics
+---------------------------*/
