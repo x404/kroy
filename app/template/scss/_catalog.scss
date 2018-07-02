@@ -1,0 +1,26 @@
+.catalog{
+	.pagination{
+		margin-bottom: 20px;
+		padding-bottom: 20px;
+		&:after{
+			@extend .before;
+			background-image: linear-gradient(to right, #fff 0%, #97a7c6 50%, #97a7c6 51%, #fff 100%);	
+			bottom: 0;
+			height: 1px;
+			left: 0;
+			width: 100%;			
+		}
+	}
+}
+
+.products{
+	padding-top: 20px;
+	margin-bottom: -20px;
+	.filter{
+		margin: 0 0 30px;
+		justify-content: center;
+	}
+	.chosen-container{
+		margin: 0 16px;
+	}
+}
