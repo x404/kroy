@@ -85,7 +85,7 @@ $(document).ready(function(){
 		}
 	});
 
-	var quantity = $("#quantity");
+	var quantity = $('#quantity');
 	$('.count #plus').click(function(e){
 		e.preventDefault();
 		quantity.val(parseInt(quantity.val())+1);
