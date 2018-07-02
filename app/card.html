@@ -154,7 +154,7 @@
 
 				<div class="flexbox card__details">
 					<div class="card__gallery">
-						<img src="/images/card/bigpic.jpg" alt="" id="mainImg" />
+						<img src="/images/card/bigpic.jpg" alt="" id="mainImg" class="cloudzoom" data-cloudzoom = "zoomImage: '/images/card/bigpic.jpg'" />
 						<div class="card__thumbs">
 							<a href="/images/card/bigpic.jpg" title="" class="active"><img src="/images/card/thumb-1.jpg" alt="" /></a>
 							<a href="/tmp/2.jpg" title=""><img src="/images/card/thumb-2.jpg" alt="" /></a>
@@ -295,9 +295,15 @@
 <script src="//yastatic.net/share2/share.js"></script>
 
 <!-- InstanceBeginEditable name="EditRegion4" -->
+<link rel="stylesheet" property="stylesheet" href="/template/css/cloudzoom.css">
+<script src="/template/js/cloudzoom.js"></script>
+
+
 <link rel="stylesheet" property="stylesheet" href="/template/css/chosen.css">
 <script src="/template/js/chosen.jquery.min.js"></script>
 <script>
+	CloudZoom.quickStart();
+
 	$('#type,#color').chosen({
 		no_results_text: "Ничего не найдено..",
 		width: "185px"

@@ -310,6 +310,9 @@ input::-webkit-inner-spin-button {
   .slogan span {
     color: #000; }
 
+.hide {
+  display: none !important; }
+
 .header {
   background: #e8e8e8;
   font-family: 'PalatinoLinotype';
