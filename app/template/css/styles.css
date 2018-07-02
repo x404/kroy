@@ -834,6 +834,10 @@ input::-webkit-inner-spin-button {
     .media__list-wrap .news__item {
       margin-bottom: 40px;
       min-height: 208px; }
+      .media__list-wrap .news__item p {
+        margin: 0; }
+      .media__list-wrap .news__item h3 {
+        margin-bottom: 3px; }
 
 .media__half .media__inner {
   width: 565px; }
@@ -988,6 +992,7 @@ input::-webkit-inner-spin-button {
   font-family: 'PalatinoLinotype';
   font-size: 18px;
   max-width: 365px;
+  min-height: 170px;
   padding: 35px 10px 5px;
   text-align: center; }
 
@@ -1526,7 +1531,8 @@ header.flexbox {
 
 .catalog .pagination {
   margin-bottom: 20px;
-  padding-bottom: 20px; }
+  padding-bottom: 8px;
+  padding-top: 10px; }
   .catalog .pagination:after {
     background-image: linear-gradient(to right, #fff 0%, #97a7c6 50%, #97a7c6 51%, #fff 100%);
     bottom: 0;

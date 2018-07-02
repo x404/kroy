@@ -1,7 +1,8 @@
 .catalog{
 	.pagination{
 		margin-bottom: 20px;
-		padding-bottom: 20px;
+		padding-bottom: 8px;
+		padding-top: 10px;
 		&:after{
 			@extend .before;
 			background-image: linear-gradient(to right, #fff 0%, #97a7c6 50%, #97a7c6 51%, #fff 100%);	
