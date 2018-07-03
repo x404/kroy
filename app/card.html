@@ -155,11 +155,20 @@
 				<div class="flexbox card__details">
 					<div class="card__gallery">
 						<img src="/images/card/bigpic.jpg" alt="" id="mainImg" class="cloudzoom" data-cloudzoom = "zoomImage: '/images/card/bigpic.jpg'" />
+
 						<div class="card__thumbs">
-							<a href="/images/card/bigpic.jpg" title="" class="active"><img src="/images/card/thumb-1.jpg" alt="" /></a>
-							<a href="/tmp/2.jpg" title=""><img src="/images/card/thumb-2.jpg" alt="" /></a>
-							<a href="/tmp/9.jpg" title=""><img src="/images/card/thumb-3.jpg" alt="" /></a>
-							<a href="/tmp/4.jpg" title=""><img src="/images/card/thumb-4.jpg" alt="" /></a>
+							<a href="/images/card/bigpic.jpg" title="" >
+								<img class="cloudzoom-gallery cloudzoom-gallery-active"  src="/images/card/thumb-1.jpg" alt ="" data-cloudzoom='useZoom:"#mainImg", image:"/images/card/bigpic.jpg", zoomImage:"/images/card/bigpic.jpg"'>
+							</a>
+							<a href="/tmp/2.jpg" title="">
+								<img class="cloudzoom-gallery" src="/images/card/thumb-2.jpg" alt ="" data-cloudzoom='useZoom:"#mainImg", image:"/tmp/2.jpg", zoomImage:"/images/card/2.jpg"'>
+							</a>
+							<a href="/tmp/9.jpg" title="">
+								<img class="cloudzoom-gallery" src="/images/card/thumb-3.jpg" alt ="" data-cloudzoom='useZoom:"#mainImg", image:"/tmp/9.jpg", zoomImage:"/images/card/9.jpg"'>
+							</a>
+							<a href="/tmp/4.jpg" title="">
+								<img class="cloudzoom-gallery" src="/images/card/thumb-3.jpg" alt ="" data-cloudzoom='useZoom:"#mainImg", image:"/tmp/4.jpg", zoomImage:"/images/card/4.jpg"'>
+							</a>
 						</div>
 					</div>
 					<div class="card__description">

@@ -111,18 +111,18 @@ $(document).ready(function(){
 
 
 // card thumbs
-var thumbsurl = document.querySelectorAll('.card__thumbs a');
-for (index = 0; index < thumbsurl.length; index++) {
-    thumb = thumbsurl[index];
-    thumb.addEventListener('click', clickHandler);
-}
+// var thumbsurl = document.querySelectorAll('.card__thumbs a');
+// for (index = 0; index < thumbsurl.length; index++) {
+//     thumb = thumbsurl[index];
+//     thumb.addEventListener('click', clickHandler);
+// }
 
-function clickHandler(event) {
-    let $newSrc = this.href;
-    document.getElementById('mainImg').src = $newSrc;
-    document.querySelector('.card__thumbs a.active').classList.remove('active');
-    this.classList.add('active');
-    event.preventDefault();
-}
+// function clickHandler(event) {
+//     // let $newSrc = this.href;
+//     // document.getElementById('mainImg').src = $newSrc;
+//     // document.querySelector('.card__thumbs a.active').classList.remove('active');
+//     // this.classList.add('active');
+//     event.preventDefault();
+// }
 // =/card thumbs
 

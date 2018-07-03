@@ -1567,13 +1567,13 @@ header.flexbox {
   .card__thumbs img {
     border-radius: 15px;
     vertical-align: top; }
-  .card__thumbs a {
+  .card__thumbs a .cloudzoom-gallery {
     opacity: .5;
     transition: .3s opacity; }
-    .card__thumbs a:hover {
-      opacity: 1; }
-    .card__thumbs a.active {
-      opacity: 1; }
+  .card__thumbs a:hover .cloudzoom-gallery-active {
+    opacity: 1; }
+  .card__thumbs a .cloudzoom-gallery-active {
+    opacity: 1; }
 
 .card #mainImg {
   border-radius: 15px;

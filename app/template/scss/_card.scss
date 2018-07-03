@@ -18,13 +18,19 @@
 			vertical-align: top;
 		}
 		a{
-			opacity: .5;
-			transition: .3s opacity;
+			.cloudzoom-gallery{
+				opacity: .5;
+				transition: .3s opacity;
+				
+			}
 			&:hover{
-				opacity: 1;
+				.cloudzoom-gallery-active{
+					opacity: 1;					
+				}
 			}
 
-			&.active{
+			// &.active,
+			.cloudzoom-gallery-active{
 				opacity: 1;
 			}
 		}
