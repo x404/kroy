@@ -9,17 +9,17 @@ $(document).ready(function(){
 		autoplaySpeed: 4000
 	});
 
-	$('#inner-carousel').slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		prevArrow: '',
-		nextArrow: '',
-		autoplay: true,
-		autoplaySpeed: 4000,
-		fade: true,
-		cssEase: 'linear',
-		lazyLoad: 'ondemand',
-	});
+	// $('#inner-carousel').slick({
+	// 	slidesToShow: 1,
+	// 	slidesToScroll: 1,
+	// 	prevArrow: '',
+	// 	nextArrow: '',
+	// 	autoplay: true,
+	// 	autoplaySpeed: 4000,
+	// 	fade: true,
+	// 	cssEase: 'linear',
+	// 	lazyLoad: 'ondemand',
+	// });
 
 
 	// mobile-menu
@@ -34,15 +34,11 @@ $(document).ready(function(){
 			},
 			openMenu = function(e){
 				e.preventDefault();
-				h = $(document).height();
 				$('body').addClass('o-menu');
-				$('#navbar').height(h);
-
 			},
 			closeMenu = function(e){
 				e.preventDefault();
 				$('body').removeClass('o-menu');
-				$('#navbar').height('auto');
 			};
 		init();
 	});	
@@ -108,6 +104,14 @@ $(document).ready(function(){
 
 });
 
+// показываем второй  уровень меню
+$(document).on('click', '.o-menu .folder > a, .o-menu .folder > span', function(e){
+	e.preventDefault();
+	var $this = $(this);
+	$this.next('.subnav').slideToggle('normal', function(){
+		$this.toggleClass('open')
+	});
+})
 
 
 // card thumbs

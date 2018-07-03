@@ -8,13 +8,32 @@
 		padding-left: 15px;
 		padding-right: 15px;
 	}
+	.col-xs-6{
+		width: 50%;
+	}
+
+	.col-xs-12{
+		width: 100%
+	}
 }
+
+@media (min-width: 768px) {
+	
+}
+
 
 @media (min-width: 768px) {
 	.container{
 		width: 730px;
 	}
+	
+	.col-sm-6{
+		width: 50%;
+	}
 
+	.col-sm-12{
+		width: 100%
+	}
 }
 @media (min-width: 992px) {
 	.container {
@@ -33,9 +52,7 @@
 }
 
 @media (min-width: 1150px) {
-	.container {
-		// width: 1050px;
-	}
+
 }
 
 

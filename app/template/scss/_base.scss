@@ -39,7 +39,7 @@ html {
 body{
 	@include flexbox;
 	font-size: 14px;
-	font-family: "SegoeUIItalic";
+	font-family: "SegoeUIItalic", Arial;
 	flex-flow: column;
 	font-display: swap;
 	height: 100vh;

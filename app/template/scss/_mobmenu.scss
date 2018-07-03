@@ -1,5 +1,5 @@
 $color_1: #fff; 
-$color_2: #0563bf;
+$color_2: #2f4f8e;
 
 
 /* =mobile-menu
@@ -48,12 +48,6 @@ $color_2: #0563bf;
 			margin: 8px auto;
 			width: 30px;
 		}
-		&:hover{
-			// background-color: saturation(#0563bf, 150%);
-			.icon-bar{
-				// background-color:;
-			}
-		}
 	}
 
 
@@ -76,6 +70,13 @@ $color_2: #0563bf;
 			top: 0;
 			bottom: 0;
 			overflow: auto;	
+			a{
+				font-size: 16px;
+			}
+		}
+
+		.mainnav .nav .subnav{
+			background: none;
 		}
 
 		.mobinfo{
@@ -83,7 +84,7 @@ $color_2: #0563bf;
 			a{
 				color: $color_1;
 				display: block;
-				margin: 1.8rem;
+				margin: 18px 0;
 				text-decoration: none;
 				&:hover{
 					text-decoration: underline;
@@ -91,20 +92,20 @@ $color_2: #0563bf;
 			}
 		}
 
-			.show-sm{
-				@include font-size(1.5);
-				padding-left: 3rem;
-				a{
-					color: $color2;
-					display: block;
-					margin: 1.8rem 0;
-					text-decoration: none;
-					border-bottom: none !important;
-					&:hover{
-						text-decoration: underline;
-					}
+		.show-sm{
+			padding-left: 30px;
+			a{
+				font-size: 18px;
+				color: $color2;
+				display: block;
+				margin: 18px 0;
+				text-decoration: none;
+				border-bottom: none !important;
+				&:hover{
+					text-decoration: underline;
 				}
 			}
+		}
 	}
 
 	.close-menu{

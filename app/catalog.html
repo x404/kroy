@@ -95,7 +95,7 @@
 				<div class="logo text-center col-md-3">
 					<a href="/" title=""><img src="/template/images/logo.png" alt="КройАвто"></a>
 				</div>
-				<div class="slogan col-md-3 text-center">
+				<div class="slogan text-center">
 					авточехлы <span>из экокожи</span> от <br> производителя
 				</div>
 				<div class="callback text-right col-md-3">
@@ -104,7 +104,7 @@
 						<p><a href="#" class="callback">перезвонить?</a></p>
 					</div>
 				</div>
-				<div class="qcart col-md-3">
+				<div class="qcart">
 					<div class="qcart__inner sq sq-blue">
 						<p class="count">3 шт. (25350 руб)</p>
 						<a href="#" class="to-cart">перейти в корзину</a>						
@@ -113,32 +113,30 @@
     		</div>
     	</div>
 	</header>
+	<button type="button" class="navbar-toggle" aria-label="Показать/Скрыть меню">
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+	</button>
+	<button type="button" class="close-menu"><img src="/template/images/close.png" alt="Закрыть меню" /></button>
 	<!-- =/header -->
 	
 	<!-- =carousel -->
 	<div class="innercarousel">
 		<div class="text"><p>Модельные авточехлы из экокожи на любой автомобиль</p></div>
-		<div id="inner-carousel">
-			<div><img alt="" data-lazy="/images/innerslider/slide-1.jpg"></div>
-			<div><img alt="" data-lazy="/images/innerslider/slide-2.jpg"></div>
-			<div><img alt="" data-lazy="/images/innerslider/slide-3.jpg"></div>
-			<div><img alt="" data-lazy="/images/innerslider/slide-4.jpg"></div>
-			<div><img alt="" data-lazy="/images/innerslider/slide-5.jpg"></div>
-			<div><img alt="" data-lazy="/images/innerslider/slide-6.jpg"></div>
-			<div><img alt="" data-lazy="/images/innerslider/slide-7.jpg"></div>
-			<div><img alt="" data-lazy="/images/innerslider/slide-8.jpg"></div>
-			<div><img alt="" data-lazy="/images/innerslider/slide-9.jpg"></div>
-			<div><img alt="" data-lazy="/images/innerslider/slide-10.jpg"></div>
-			<div><img alt="" data-lazy="/images/innerslider/slide-11.jpg"></div>
-			<div><img alt="" data-lazy="/images/innerslider/slide-12.jpg"></div>
-			<div><img alt="" data-lazy="/images/innerslider/slide-13.jpg"></div>
-			<div><img alt="" data-lazy="/images/innerslider/slide-14.jpg"></div>
-			<div><img alt="" data-lazy="/images/innerslider/slide-15.jpg"></div>
-			<div><img alt="" data-lazy="/images/innerslider/slide-16.jpg"></div>
-			<div><img alt="" data-lazy="/images/innerslider/slide-17.jpg"></div>
-			<div><img alt="" data-lazy="/images/innerslider/slide-18.jpg"></div>
-			<div><img alt="" data-lazy="/images/innerslider/slide-19.jpg"></div>
-		</div>
+		<picture>
+			<source
+				media="(min-width: 1024px)"
+				srcset="/images/innerslider/slide-1.jpg">
+			<source
+				media="(min-width: 400px)"
+				srcset="/images/innerslider/slide-1-500.jpg">
+			<source
+				media="(min-width: 320px)"
+				srcset="/images/innerslider/slide-1-350.jpg">		
+			<img
+				src="/images/innerslider/slide-1.jpg" alt="">
+		</picture>
 	</div>
 	<!-- =/carousel -->	
 	
@@ -427,20 +425,20 @@
 <!-- =footer -->
 <footer class="footer bg-color">
 	<div class="container">
-		<div class="flexbox">
-			<div class="col-md-3 logo text-center">
+		<div class="flexboxw">
+			<div class="col-md-3 col-xs-12 logo text-center">
 				<img src="/template/images/logo.png" alt="КройАвто" />
 				<div class="slogan">
 					<p>авточехлы <span>из экокожи</span> от <br> производителя</p>					
 				</div>
 			</div>
-			<div class="col-md-6 address text-center">
+			<div class="col-md-6 col-sm-12 col-xs-12 address text-center">
 				<p>Московская обл., п. Вёшки, ул. Выставочная 53. Офис 12 </p>
 				<p>+7 926 102-68-86 и +7 926 702-68-86</p>
 				<p>офис - <a href="mailto:info@kroy-auto.ru">info@kroy-auto.ru</a></p>
 				<p>для дилеров - <a href="mailto:sales@kroy-auto.ru">sales@kroy-auto.ru</a></p>
 			</div>
-			<div class="col-md-3 footer__right">
+			<div class="col-md-3 col-sm-12 col-xs-12 footer__right">
 				<div class="social">
 					<a href="#" title="" target="_blank"><img src="/template/images/social/ok.png" alt="Одноклассники" width="38" height="38" /></a>
 					<a href="#" title="" target="_blank"><img src="/template/images/social/vk.png" alt="Вконтакте" width="38" height="38" /></a>
