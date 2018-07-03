@@ -290,10 +290,15 @@
 
 
 
+.text-production{
+	margin-top: 0;
+}
+
 
 /* = reason
 ---------------------------*/
 .reason{
+	padding-bottom: 20px;
 	.nav{
 		display: flex;
 		font-family: 'PalatinoLinotype';
@@ -362,6 +367,16 @@
 ---------------------------*/
 
 
+
+.homepage{
+	.photogallery {
+		padding-bottom: 23px;
+	}
+
+	.video{
+		padding-bottom: 20px;
+	}
+}
 
 
 /* =news

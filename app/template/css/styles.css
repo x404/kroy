@@ -921,59 +921,69 @@ input::-webkit-inner-spin-button {
 
 /* =/media
 ---------------------------*/
+.text-production {
+  margin-top: 0; }
+
 /* = reason
 ---------------------------*/
-.reason .nav {
-  display: flex;
-  font-family: 'PalatinoLinotype';
-  justify-content: center;
-  font-size: 18px; }
-  .reason .nav a {
-    display: inline-block;
-    border-bottom: 1px dashed rgba(47, 79, 142, 0);
-    color: #808080;
-    margin-left: 16px;
-    margin-right: 16px;
-    text-decoration: none; }
-    .reason .nav a.active {
-      border-bottom: 1px dashed;
-      color: #2f4f8e; }
-
-.reason .tab-content {
-  padding: 0 20px;
-  margin-top: 40px; }
-  .reason .tab-content .flexbox {
-    align-items: center; }
-  .reason .tab-content .left {
-    padding-right: 15px; }
-    .reason .tab-content .left img {
-      border-radius: 18px;
-      vertical-align: top; }
-    .reason .tab-content .left .pic {
-      position: relative; }
-      .reason .tab-content .left .pic .more {
-        bottom: 0;
-        margin: 0;
-        position: absolute;
-        right: 0; }
-        .reason .tab-content .left .pic .more a {
-          display: block;
-          background: url(../images/more.png) no-repeat left top;
-          height: 52px;
-          width: 92px; }
-          .reason .tab-content .left .pic .more a:after {
-            background: url(../images/more.png) no-repeat left -52px;
+.reason {
+  padding-bottom: 20px; }
+  .reason .nav {
+    display: flex;
+    font-family: 'PalatinoLinotype';
+    justify-content: center;
+    font-size: 18px; }
+    .reason .nav a {
+      display: inline-block;
+      border-bottom: 1px dashed rgba(47, 79, 142, 0);
+      color: #808080;
+      margin-left: 16px;
+      margin-right: 16px;
+      text-decoration: none; }
+      .reason .nav a.active {
+        border-bottom: 1px dashed;
+        color: #2f4f8e; }
+  .reason .tab-content {
+    padding: 0 20px;
+    margin-top: 40px; }
+    .reason .tab-content .flexbox {
+      align-items: center; }
+    .reason .tab-content .left {
+      padding-right: 15px; }
+      .reason .tab-content .left img {
+        border-radius: 18px;
+        vertical-align: top; }
+      .reason .tab-content .left .pic {
+        position: relative; }
+        .reason .tab-content .left .pic .more {
+          bottom: 0;
+          margin: 0;
+          position: absolute;
+          right: 0; }
+          .reason .tab-content .left .pic .more a {
+            display: block;
+            background: url(../images/more.png) no-repeat left top;
             height: 52px;
-            opacity: 0;
-            transition: .3s opacity;
             width: 92px; }
-          .reason .tab-content .left .pic .more a:hover:after {
-            opacity: 1; }
-  .reason .tab-content .right {
-    padding: 0 15px; }
+            .reason .tab-content .left .pic .more a:after {
+              background: url(../images/more.png) no-repeat left -52px;
+              height: 52px;
+              opacity: 0;
+              transition: .3s opacity;
+              width: 92px; }
+            .reason .tab-content .left .pic .more a:hover:after {
+              opacity: 1; }
+    .reason .tab-content .right {
+      padding: 0 15px; }
 
 /* =/ reason
 ---------------------------*/
+.homepage .photogallery {
+  padding-bottom: 23px; }
+
+.homepage .video {
+  padding-bottom: 20px; }
+
 /* =news
 ---------------------------*/
 .news__list {
