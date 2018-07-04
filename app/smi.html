@@ -153,7 +153,17 @@
 							<a href="news.html" class="media__link effect-bubba">
 								<div class="media__inner">
 									<div class="media__pic">
-										<img src="/images/new.jpg" alt="" width="565" height="165" />
+										<picture>
+											<source
+												media="(min-width: 500px)"
+												srcset="/images/new.jpg">
+											<source
+												media="(min-width: 320px)"
+												srcset="/images/new-350.jpg">		
+											<img src="/images/new.jpg" alt="" width="565" height="165" />
+										</picture>
+
+										<!-- <img src="/images/new.jpg" alt="" width="565" height="165" /> -->
 									</div>
 									<p class="media__title">НОВОСТИ</p>
 								</div>
@@ -164,7 +174,16 @@
 							<a href="articles.html" class="media__link effect-bubba">
 								<div class="media__inner">
 									<div class="media__pic">
-										<img src="/images/article.jpg" alt="" width="565" height="165" />
+										<picture>
+											<source
+												media="(min-width: 500px)"
+												srcset="/images/article.jpg">
+											<source
+												media="(min-width: 320px)"
+												srcset="/images/article-350.jpg">		
+											<img src="/images/article.jpg" alt="" width="565" height="165" />
+										</picture>
+										<!-- <img src="/images/article.jpg" alt="" width="565" height="165" /> -->
 									</div>
 									<p class="media__title">СТАТЬИ</p>
 								</div>
@@ -193,7 +212,7 @@
 <footer class="footer bg-color">
 	<div class="container">
 		<div class="flexboxw">
-			<div class="col-md-3 col-xs-12 logo text-center">
+			<div class="col-md-3 col-sm-12 col-xs-12 logo text-center">
 				<img src="/template/images/logo.png" alt="КройАвто" />
 				<div class="slogan">
 					<p>авточехлы <span>из экокожи</span> от <br> производителя</p>					

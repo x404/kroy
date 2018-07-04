@@ -61,6 +61,13 @@ header.flexbox{
 				margin-bottom: -20px;
 			}
 		}
+		&__title{
+			margin: 0;
+		}
+	}
+
+	img{
+		max-width: 100%;
 	}
 }
 
@@ -71,6 +78,15 @@ header.flexbox{
 		}
 	}
 }
+
+
+.news__list{
+	.badge{
+		bottom: auto;
+		top: 140px;
+	}
+}
+
 
 .innercarousel{
 	position: relative;
