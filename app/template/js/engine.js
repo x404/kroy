@@ -6,7 +6,8 @@ $(document).ready(function(){
 		prevArrow: '<button type="button" class="slick-prev slick-arrow" aria-label="Назад"></button>',
 		nextArrow: '<button type="button" class="slick-next slick-arrow" aria-label="Вперед"></button>',
 		autoplay: false,
-		autoplaySpeed: 4000
+		autoplaySpeed: 4000,
+		adaptiveHeight: true
 	});
 
 	// $('#inner-carousel').slick({

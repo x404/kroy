@@ -768,7 +768,8 @@ input::-webkit-inner-spin-button {
 ---------------------------*/
 .carousel {
   font-size: 18px;
-  color: #808080; }
+  color: #808080;
+  position: relative; }
   .carousel .blue {
     color: #2f4f8e; }
   .carousel img {
@@ -2034,6 +2035,9 @@ tbody.collapse.show {
 @media (max-width: 1199px) {
   .mainnav {
     font-size: 17px; }
+  .carousel .text {
+    padding-left: 5px;
+    width: 50%; }
   .media__inner {
     height: 145px;
     width: 300px; }
@@ -2124,7 +2128,21 @@ tbody.collapse.show {
     .card .nav .btn {
       width: 100%; }
   .actions .media__cell {
-    margin-bottom: 25px; } }
+    margin-bottom: 25px; }
+  .carousel .text {
+    position: static;
+    padding-right: 5px;
+    text-align: center;
+    justify-content: center;
+    width: 100%; }
+    .carousel .text__inner {
+      max-width: 100%; }
+  .carousel .action {
+    left: 50%;
+    margin-left: -115px; }
+  .carousel img {
+    height: 300px;
+    width: auto; } }
 
 @media (max-width: 767px) {
   .reason .tab-content .left {
@@ -2226,6 +2244,8 @@ tbody.collapse.show {
     width: 300px; } }
 
 @media (max-width: 450px) {
+  .homepage .carousel {
+    display: none; }
   .card__gallery {
     width: auto; }
   .card__thumbs a {

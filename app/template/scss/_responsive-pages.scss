@@ -46,13 +46,16 @@
 	.card__gallery{
 		width: 500px;
 	}
-
-
 }
 
 @media (max-width: 1199px){
 	.mainnav{
 		font-size: 17px;
+	}
+
+	.carousel .text{
+		padding-left: 5px;
+		width: 50%;
 	}
 
 	.media__inner{
@@ -225,6 +228,27 @@
 
 	.actions .media__cell{
 		margin-bottom: 25px;
+	}
+
+	.carousel{
+		.text{
+			position: static;
+			padding-right: 5px;
+			text-align: center;
+			justify-content: center;
+			width: 100%;
+			&__inner{
+				max-width: 100%;
+			}
+		}
+		.action{
+			left: 50%;
+			margin-left: -115px;
+		}
+		img{
+			height: 300px;
+			width: auto;
+		}
 	}
 }
 
@@ -410,6 +434,11 @@
 
 
 @media (max-width: 450px){
+	.homepage{
+		.carousel{
+			display: none;
+		}
+	}
 	// =card
 	.card{
 		&__gallery{
