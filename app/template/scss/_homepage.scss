@@ -103,17 +103,18 @@
 		position: relative;
 	}
 	.action{
-		display: flex;
 		align-items: center;
-		position: absolute;
-		font-size: 18px;
-		width: 236px;
-		height: 272px;
 		background: url(../images/label.png) no-repeat;
 		color: $color2;
+		display: flex;
+		font-size: 18px;
+		height: 272px;
+		margin-top: -135px;
+		margin-left: 30px;
+		position: absolute;
 		position: absolute;
 		top: 50%;
-		margin-top: -135px;
+		width: 236px;
 		a{
 			color: currentColor;
 			@extend .tdn;
@@ -241,7 +242,7 @@
 		width: 365px;
 	}
 	&__link{
-		color: $color2;
+		color: $color2 !important;
 		display: block;
 		.media__pic{
 			img{

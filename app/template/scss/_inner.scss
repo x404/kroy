@@ -71,6 +71,16 @@ header.flexbox{
 	}
 }
 
+main,
+.main{
+	.text{
+		a{
+			color: $color4;
+			@extend .tdn;
+		}
+	}
+}
+
 .photos{
 	.media{
 		&__cell{
@@ -120,7 +130,7 @@ header.flexbox{
 	position: relative;
 	text-align: center;
 	font-family: 'PalatinoLinotypeRegular';
-	font-size: 18px;
+	font-size: 20px;
 	padding-top: 15px;
 	margin-bottom: -18px;
 	margin-top: 25px;
@@ -143,6 +153,9 @@ header.flexbox{
 			a{
 				color: #666;
 				text-decoration: none;
+				&:hover{
+					color: $color4;
+				}
 			}
 			&:before{
 				display: none;

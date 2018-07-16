@@ -205,9 +205,11 @@ em strong {
   font-weight: 600;
   font-style: italic; }
 
-.tdn, .mainnav a, .mainnav .nav .subnav ul a, .footer .address a, .footer .kreotif a, .user-access:not(checked) + label a, .carousel .action a, .vcard a, .main .contacts p a {
+.tdn, .mainnav a, .mainnav .nav .subnav ul a, .footer .address a, .footer .kreotif a, .user-access:not(checked) + label a, .carousel .action a, .vcard a, main .text a,
+.main .text a, .main .contacts p a {
   text-decoration: none; }
-  .tdn:hover, .mainnav a:hover, .mainnav .nav .subnav ul a:hover, .footer .address a:hover, .footer .kreotif a:hover, .user-access:not(checked) + label a:hover, .carousel .action a:hover, .vcard a:hover, .main .contacts p a:hover {
+  .tdn:hover, .mainnav a:hover, .mainnav .nav .subnav ul a:hover, .footer .address a:hover, .footer .kreotif a:hover, .user-access:not(checked) + label a:hover, .carousel .action a:hover, .vcard a:hover, main .text a:hover,
+  .main .text a:hover, .main .contacts p a:hover {
     text-decoration: underline; }
 
 .tdu {
@@ -895,17 +897,18 @@ input.error {
   .carousel .slide {
     position: relative; }
   .carousel .action {
-    display: flex;
     align-items: center;
-    position: absolute;
-    font-size: 18px;
-    width: 236px;
-    height: 272px;
     background: url(../images/label.png) no-repeat;
     color: #fff;
+    display: flex;
+    font-size: 18px;
+    height: 272px;
+    margin-top: -135px;
+    margin-left: 30px;
+    position: absolute;
     position: absolute;
     top: 50%;
-    margin-top: -135px; }
+    width: 236px; }
     .carousel .action a {
       color: currentColor; }
     .carousel .action .more {
@@ -1002,7 +1005,7 @@ input.error {
   width: 365px; }
 
 .media__link {
-  color: #fff;
+  color: #fff !important;
   display: block; }
   .media__link .media__pic img {
     vertical-align: top;
@@ -1315,6 +1318,10 @@ header.flexbox {
   .main img {
     max-width: 100%; }
 
+main .text a,
+.main .text a {
+  color: #2f4f8e; }
+
 .photos .media__cell {
   margin-bottom: 40px; }
 
@@ -1348,7 +1355,7 @@ header.flexbox {
   position: relative;
   text-align: center;
   font-family: 'PalatinoLinotypeRegular';
-  font-size: 18px;
+  font-size: 20px;
   padding-top: 15px;
   margin-bottom: -18px;
   margin-top: 25px; }
@@ -1367,6 +1374,8 @@ header.flexbox {
       .pagination ul li a {
         color: #666;
         text-decoration: none; }
+        .pagination ul li a:hover {
+          color: #2f4f8e; }
       .pagination ul li:before {
         display: none; }
       .pagination ul li .current {
@@ -1821,8 +1830,12 @@ header.flexbox {
     margin-right: 14px; }
     .card .nav li:before {
       display: none !important; }
-    .card .nav li a.active {
-      background-color: #2f4f8e; }
+    .card .nav li a {
+      color: #fff; }
+      .card .nav li a:hover {
+        text-decoration: none; }
+      .card .nav li a.active {
+        background-color: #2f4f8e; }
 
 .modal {
   position: fixed;

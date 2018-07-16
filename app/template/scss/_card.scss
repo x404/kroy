@@ -131,6 +131,10 @@
 				display: none !important;
 			}
 			a{
+				color: $color2;
+				&:hover{
+					text-decoration: none;
+				}
 				&.active{
 					background-color: $color4
 				}
