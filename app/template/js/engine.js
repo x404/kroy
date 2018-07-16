@@ -163,6 +163,8 @@ $(document).ready(function(){
 
 
 	var thankcallback = '<div class="thank text-center"><p>В ближайщее время с вами свяжутся наши менеджеры для уточнения всех деталей</p></div>';
+	var thankfaq = '<div class="thank text-center"><p>Ваш вопрос отправлен</p></div>';
+	var thankreview = '<div class="thank text-center"><p>Ваш отзыв отправлен</p></div>';
 	// validation forms
 	$('#callback-form').validate({
         rules : {
@@ -196,11 +198,42 @@ $(document).ready(function(){
 
 
 
+	$('#addfaq-form').validate({
+        rules : {
+            tel:{validphone:true}           
+        },
+		submitHandler: function(form){
+			var strSubmit=$(form).serialize();
+			// $(form).find('fieldset').hide();
+			$(form).append('<div class="sending">Идет отправка ...</div>');
+
+			$.ajax({
+				type: "POST",
+				url: $(form).attr('action'),
+				data: strSubmit,
+				success: function(){
+					document.querySelector('.sending').remove();
+					($(form).data('id') == 'review') ? $(form).append(thankreview): $(form).append(thankfaq);					
+					startClock('addfaq-form');
+				},
+				error: function(){
+					alert(errorTxt);
+					$(form).find('fieldset').show();
+					$('.sending').remove();
+				}
+			})
+			.fail(function(error){
+				alert(errorTxt);
+			});
+		}
+	});
+
+
+
 	$('#callback-form22').validate({
         rules : {
             tel:{validphone:true}           
         },
-
 		submitHandler: function(form){
 			var strSubmit=$(form).serialize();
 			$(form).find('fieldset').hide();
@@ -237,34 +270,38 @@ function showTime(sendform){
 	if (sec <=0) {
 		stopClock();
 
-		switch (sendform){
-			case 'callback-form':
 				modal = $("#" + sendform).closest('.modal');
 				modal.modal('hide');
 				modal.find('.thank').remove();
 				modal.find('.form-control, textarea').val('');
-				break;
-			case 'feedback-form':
-				$('.feedback .thank').fadeOut('normal',function(){
-					$('.feedback .thank').remove();
-					$('.feedback .form-control, .feedback textarea').val('');
-					$('.feedback__form fieldset').show();
-				});
-				break;
-			case 'cart-form':
-				$('.cart .thank').fadeOut('normal',function(){
-					$('.cart .thank').remove();
-					// $('.cart .form-control, .cart textarea').val('');
-					// $('.cart__form fieldset').show();
-				});
-				break;	
-			default:
-				modal = $("#" + sendform).closest('.modal');
-				modal.fadeOut('normal',function(){
-					modal.modal('hide');
-				});
-				break;
-		}
+				
+		// switch (sendform){
+		// 	case 'callback-form':
+		// 		modal = $("#" + sendform).closest('.modal');
+		// 		modal.modal('hide');
+		// 		modal.find('.thank').remove();
+		// 		modal.find('.form-control, textarea').val('');
+		// 		break;
+		// 	case 'addfaq-form':
+		// 		modal = $("#" + sendform).closest('.modal');
+		// 		modal.modal('hide');
+		// 		modal.find('.thank').remove();
+		// 		modal.find('.form-control, textarea').val('');
+		// 		break;
+		// 	case 'cart-form':
+		// 		$('.cart .thank').fadeOut('normal',function(){
+		// 			$('.cart .thank').remove();
+		// 			// $('.cart .form-control, .cart textarea').val('');
+		// 			// $('.cart__form fieldset').show();
+		// 		});
+		// 		break;	
+		// 	default:
+		// 		modal = $("#" + sendform).closest('.modal');
+		// 		modal.fadeOut('normal',function(){
+		// 			modal.modal('hide');
+		// 		});
+		// 		break;
+		// }
 	}
 }
 function stopClock(){

@@ -19,7 +19,9 @@
 <meta name="theme-color" content="#ffffff">
 
 <meta name="robots" content="noindex,nofollow" />
-<!-- InstanceBeginEditable name="doctitle" --><title>Вопрос-ответ</title><!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Вопрос-ответ</title>
+<!-- InstanceEndEditable -->
 <link rel="stylesheet" href="/template/css/styles.min.css" />
 <script src="/template/js/libs.min.js"></script>
 
@@ -35,7 +37,8 @@
 <!--[if IE]>
 	<link href="/template/css/styles-ie.css" rel="stylesheet" type="text/css" />
 <![endif]-->
-<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
 </head>
 <body>
 
@@ -146,7 +149,48 @@
 	</div>
 	<!-- =/carousel -->	
 	
-	<!-- InstanceBeginEditable name="EditRegion3" -->	<div class="main">		<div class="container">			<section>				<header class="flexbox">					<h1 class="title">Нас часто спрашивают</h1>					<button type="button" class="btn">задать вопрос</button>									</header>				<article class="faq__item">					<h3 class="faq__title">Подойдут ли они на мой автомобиль?</h3>					<div class="faq__answer">						<p>Накидки универсальные, они подходят для всех типов автомобилей с регулируемыми подголовниками на сидениях. Наши накидки не подходят на автомобильные кресла с литыми спортивными подголовниками. </p>					</div>				</article>				<article class="faq__item">					<h3 class="faq__title">Есть ли в наличии коричневый цвет?</h3>					<div class="faq__answer">						<p>Все цвета всегда есть в наличии. </p>					</div>				</article>				<article class="faq__item">					<h3 class="faq__title">Можете отправить в Екатеринбург?</h3>					<div class="faq__answer">						<p>Можем, у нас действует доставка по всем городам России.</p>					</div>				</article>				<article class="faq__item">					<h3 class="faq__title">Можно ли их стирать?</h3>					<div class="faq__answer">						<p>Да, конечно, в стиральной машинке на деликатном режиме.</p>					</div>				</article>				<article class="faq__item">					<h3 class="faq__title">Смогу ли я сам их установить?</h3>					<div class="faq__answer">						<p>Сможете, в каждом комплекте прилагается инструкция по установке. Это у Вас займет не более 10-15 минут.</p>					</div>				</article>			</section>		</div>	</div>	<!-- InstanceEndEditable -->
+	<!-- InstanceBeginEditable name="EditRegion3" -->
+	<div class="main">
+		<div class="container">
+			<section>
+				<header class="flexbox">
+					<h1 class="title">Нас часто спрашивают</h1>
+					<button type="button" class="btn" data-toggle="modal" data-target="#addfaq">задать вопрос</button>					
+				</header>
+				<article class="faq__item">
+					<h3 class="faq__title">Подойдут ли они на мой автомобиль?</h3>
+					<div class="faq__answer">
+						<p>Накидки универсальные, они подходят для всех типов автомобилей с регулируемыми подголовниками на сидениях. Наши накидки не подходят на автомобильные кресла с литыми спортивными подголовниками. </p>
+					</div>
+				</article>
+				<article class="faq__item">
+					<h3 class="faq__title">Есть ли в наличии коричневый цвет?</h3>
+					<div class="faq__answer">
+						<p>Все цвета всегда есть в наличии. </p>
+					</div>
+				</article>
+				<article class="faq__item">
+					<h3 class="faq__title">Можете отправить в Екатеринбург?</h3>
+					<div class="faq__answer">
+						<p>Можем, у нас действует доставка по всем городам России.</p>
+					</div>
+				</article>
+				<article class="faq__item">
+					<h3 class="faq__title">Можно ли их стирать?</h3>
+					<div class="faq__answer">
+						<p>Да, конечно, в стиральной машинке на деликатном режиме.</p>
+					</div>
+				</article>
+				<article class="faq__item">
+					<h3 class="faq__title">Смогу ли я сам их установить?</h3>
+					<div class="faq__answer">
+						<p>Сможете, в каждом комплекте прилагается инструкция по установке. Это у Вас займет не более 10-15 минут.</p>
+					</div>
+				</article>
+			</section>
+		</div>
+	</div>
+	<!-- InstanceEndEditable -->
 	<!-- =share -->
 	<div class="share">
 		<div class="container text-center">
@@ -231,12 +275,53 @@
 
 <div id="outdated"></div>
 
-<script src="/template/js/owl.carousel.min.js"></script>
 <link rel="stylesheet" property="stylesheet" href="template/css/jquery.fancybox.min.css">
 
+<!-- =phone mask -->
+<script src="/template/js/inputmask/jquery.inputmask.bundle.min.js"></script>
+<!-- =/phone mask -->
 <script src="/template/js/engine.js"></script>
 <script src="//yastatic.net/share2/share.js"></script>
 
-<!-- InstanceBeginEditable name="EditRegion4" --><!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="EditRegion4" -->
+<!-- =modal addfaq -->
+<div class="modal fade" id="addfaq" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal__body">
+			<p class="title">НАПИШИТЕ ВАШ ВОПРОС</p>
+			<form action="#" method="post" class="form-policy faq__form uniform" id="addfaq-form">
+				<fieldset>
+					<div class="row flexbox">
+						<label for="name2" class="visually-hidden">как вас зовут ? *</label>
+						<input name="name" id="name2" type="text" value="" class="form-control required" placeholder="как вас зовут ? *" />
+				
+						<label for="email2" class="visually-hidden">ваш email</label>
+						<input name="email" id="email2" type="email" value="" class="form-control email" placeholder="ваш e-mail" />
+				
+						<label for="tel2" class="visually-hidden">ваш телефон</label>
+						<input name="tel" id="tel2" type="tel" value="" class="form-control required tel" placeholder="ваш телефон *" />
+					</div>
+					<div class="row">
+						<label for="msg2" class="visually-hidden">текст вашего сообщения *</label>
+						<textarea name="msg" id="msg2" cols="30" rows="10" placeholder="текст вашего сообщения ...*" class="form-control required"></textarea>
+					</div>
+					<input type="submit" name="addfaq" class="btn submit" value="отправить" />
+					<div class="policy">
+						<input type="checkbox" id="checkbox2" value="" name="checkbox" checked="checked" class="user-access">
+						<label for="checkbox2">Я Согласен на обработку персональных данных и принимаю условия <a href="#" title="" target="_blank">Пользовательского соглашения</a></label>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+		<button type="button" data-dismiss="modal" class="close-modal" aria-label="Закрыть">
+			<svg width="15" height="15">
+				<line x1="0" y1="0" x2="15" y2="15"></line>
+				<line x1="15" y1="0" x2="0" y2="15"></line>
+			</svg>
+		</button>
+	</div>
+</div>
+<!-- =/modal addfaq -->
+<!-- InstanceEndEditable -->
 </body>
 <!-- InstanceEnd --></html>

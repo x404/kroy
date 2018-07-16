@@ -261,7 +261,7 @@ input::-webkit-inner-spin-button {
   display: flex;
   flex-wrap: wrap; }
 
-.flex-center, .media__title, .card__price, .innercarousel .text {
+.flex-center, .sending, .media__title, .card__price, .innercarousel .text {
   display: flex;
   align-items: center;
   justify-content: center; }
@@ -543,49 +543,70 @@ input::-webkit-inner-spin-button {
   overflow: hidden;
   clip: rect(0 0 0 0); }
 
+.modal-dialog .form-control {
+  background: #a8a8a8;
+  border-radius: 32px;
+  border: 1px solid;
+  color: #fff;
+  display: block;
+  font-family: 'PalatinoLinotype';
+  font-size: 17px;
+  height: 34px;
+  margin-bottom: 24px;
+  text-align: center;
+  width: 100%; }
+  .modal-dialog .form-control::-webkit-input-placeholder {
+    color: #fff; }
+  .modal-dialog .form-control::-moz-placeholder {
+    color: #fff; }
+  .modal-dialog .form-control:-ms-input-placeholder {
+    color: #fff; }
+  .modal-dialog .form-control:focus::-webkit-input-placeholder {
+    transition: line-height 0.5s ease; }
+  .modal-dialog .form-control:focus::-moz-placeholder {
+    transition: line-height 0.5s ease; }
+  .modal-dialog .form-control:focus:-ms-input-placeholder {
+    transition: line-height 0.5s ease; }
+  .modal-dialog .form-control:disabled {
+    opacity: .8; }
+
+.modal-dialog .submit {
+  background-color: #2f4f8e;
+  display: block;
+  font-size: 15px;
+  height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 215px; }
+  .modal-dialog .submit:disabled {
+    cursor: default;
+    filter: grayscale(1);
+    opacity: .6; }
+
+.modal-dialog .policy {
+  margin: 20px 0 15px; }
+
+.uniform {
+  margin-top: 40px; }
+  .uniform .flexbox {
+    justify-content: space-between; }
+    .uniform .flexbox .form-control {
+      width: 32%; }
+  .uniform .form-control {
+    text-align: left;
+    padding-left: 18px;
+    padding-right: 18px; }
+  .uniform textarea.form-control {
+    height: 100px;
+    resize: none;
+    border-radius: 15px; }
+  .uniform .user-access:checked + label:after {
+    left: 15px; }
+
 #callback {
   font-family: 'PalatinoLinotype'; }
   #callback .title {
     margin-bottom: 55px; }
-  #callback .form-control {
-    background: #a8a8a8;
-    border-radius: 32px;
-    border: none;
-    color: #fff;
-    display: block;
-    font-family: 'PalatinoLinotype';
-    font-size: 17px;
-    height: 32px;
-    margin-bottom: 24px;
-    text-align: center;
-    width: 100%; }
-    #callback .form-control::-webkit-input-placeholder {
-      color: #fff; }
-    #callback .form-control::-moz-placeholder {
-      color: #fff; }
-    #callback .form-control:-ms-input-placeholder {
-      color: #fff; }
-    #callback .form-control:focus::-webkit-input-placeholder {
-      transition: line-height 0.5s ease; }
-    #callback .form-control:focus::-moz-placeholder {
-      transition: line-height 0.5s ease; }
-    #callback .form-control:focus:-ms-input-placeholder {
-      transition: line-height 0.5s ease; }
-    #callback .form-control:disabled {
-      opacity: .8; }
-  #callback .submit {
-    background-color: #2f4f8e;
-    display: block;
-    font-size: 15px;
-    height: 40px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 215px; }
-    #callback .submit:disabled {
-      filter: grayscale(1);
-      opacity: .6; }
-  #callback .policy {
-    margin: 20px 0 15px; }
 
 .user-access + label {
   cursor: pointer;
@@ -631,15 +652,19 @@ input::-webkit-inner-spin-button {
   color: #2f4f8e; }
 
 .sending {
-  text-align: center;
+  background: #fff;
+  bottom: 0;
   font-size: 17px;
-  height: 207px;
-  padding-top: 80px; }
+  left: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0; }
 
 label.error {
   display: none !important; }
 
-input.error {
+.form-control.error {
   border: 1px solid red !important; }
 
 /* Slider */
@@ -1926,7 +1951,8 @@ main .text a,
   .modal-dialog .title {
     text-transform: uppercase;
     color: #808080;
-    font-size: 22px; }
+    font-size: 22px;
+    padding-top: 15px; }
 
 .modal.fade .modal-dialog {
   transition: -webkit-transform 0.3s ease-out;
@@ -2321,7 +2347,9 @@ tbody.collapse.show {
     .modal-dialog .title {
       font-size: 20px;
       margin-bottom: 25px !important;
-      padding-top: 25px; } }
+      padding-top: 25px; }
+  .uniform {
+    margin-top: 20px; } }
 
 @media (max-width: 1399px) {
   .media__inner {
@@ -2483,7 +2511,11 @@ tbody.collapse.show {
   .news__list .badge {
     top: 140px; }
   .news__list .media__cell {
-    margin-bottom: 15px; } }
+    margin-bottom: 15px; }
+  .uniform .flexbox {
+    display: block; }
+    .uniform .flexbox .form-control {
+      width: 100%; } }
 
 @media (max-width: 750px) {
   .news__list {

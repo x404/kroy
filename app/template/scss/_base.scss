@@ -651,22 +651,17 @@ input::-webkit-inner-spin-button {
 
 
 
-#callback{
-	font-family: 'PalatinoLinotype'; 
-	.title{
-		margin-bottom: 55px;
-	}
-
+.modal-dialog{
 	.form-control{
 		@include placeholder(#fff);
 		background: $color12;
 		border-radius: 32px;
-		border: none;
+		border: 1px solid;
 		color: $color2;
 		display: block;
 		font-family: 'PalatinoLinotype'; 
 		font-size: 17px;
-		height: 32px;
+		height: 34px;
 		margin-bottom: 24px;
 		text-align: center;
 		width: 100%;
@@ -674,7 +669,6 @@ input::-webkit-inner-spin-button {
 			opacity: .8;
 		}
 	}
-
 	.submit{
 		background-color: $color4;
 		display: block;
@@ -684,6 +678,7 @@ input::-webkit-inner-spin-button {
 		margin-right: auto;
 		width: 215px;
 		&:disabled{
+			cursor: default;
 			filter: grayscale(1);
 			opacity: .6;
 		}
@@ -692,6 +687,44 @@ input::-webkit-inner-spin-button {
 	.policy{
 		margin: 20px 0 15px;
 	} 
+}
+
+
+
+
+.uniform{
+	margin-top: 40px;
+	.flexbox{
+		justify-content: space-between;
+		.form-control{
+			width: 32%;
+		}
+	}
+	.form-control{
+		text-align: left;		
+		padding-left: 18px;
+		padding-right: 18px;
+	}
+
+	textarea.form-control{
+		height: 100px;
+		resize: none;
+		border-radius: 15px
+	}
+
+	.user-access:checked+label:after{
+		left: 15px;
+	}
+}
+
+
+
+
+#callback{
+	font-family: 'PalatinoLinotype'; 
+	.title{
+		margin-bottom: 55px;
+	}
 }
 
 .user-access + label {
@@ -745,10 +778,17 @@ input::-webkit-inner-spin-button {
 
 
 .sending{
-	text-align: center;
+	@extend .flex-center;
+	background: #fff;
+	bottom: 0;
 	font-size: 17px;
-	height: 207px;
-	padding-top: 80px;
+	// height: 207px;
+	left: 0;
+	// padding-top: 80px;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: 0;
 }
 
 
@@ -756,6 +796,7 @@ label.error{
 	display: none !important;
 }
 
-input.error{
+.form-control.error{
 	border:1px solid red !important
 }
+
