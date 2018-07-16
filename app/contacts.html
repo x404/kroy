@@ -6,13 +6,20 @@
 <meta name="description" content="" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-<link rel="icon" href="/favicon.ico" type="image/x-icon"/>
-<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
+
+<link rel="apple-touch-icon" sizes="180x180" href="/the_favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/the_favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/the_favicon/favicon-16x16.png">
+<link rel="manifest" href="/the_favicon/site.webmanifest">
+<link rel="mask-icon" href="/the_favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/the_favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="/the_favicon/mstile-144x144.png">
+<meta name="msapplication-config" content="/the_favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
 
 <meta name="robots" content="noindex,nofollow" />
-<!-- InstanceBeginEditable name="doctitle" -->
-<title>Контакты</title>
-<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="doctitle" --><title>Контакты</title><!-- InstanceEndEditable -->
 <link rel="stylesheet" href="/template/css/styles.min.css" />
 <script src="/template/js/libs.min.js"></script>
 
@@ -28,8 +35,7 @@
 <!--[if IE]>
 	<link href="/template/css/styles-ie.css" rel="stylesheet" type="text/css" />
 <![endif]-->
-<!-- InstanceBeginEditable name="head" -->
-<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
 </head>
 <body>
 
@@ -140,40 +146,7 @@
 	</div>
 	<!-- =/carousel -->	
 	
-	<!-- InstanceBeginEditable name="EditRegion3" -->
-	<div class="main">
-		<div class="container">
-			<main>
-				<h1 class="title">Контактная информация</h1>
-				<div class="contacts flexboxw">
-					<div class="contacts__cell">
-						<h3 class="contacts__title">Офис</h3>
-						<p>Московская обл., п. Вёшки, <br> ул. Выставочная 53. Офис 12 </p>
-					</div>
-					<div class="contacts__cell">
-						<h3 class="contacts__title">Производство</h3>
-						<p>Московская обл., п. Вёшки, <br> ул. Выставочная 53. Офис 14 </p>
-					</div>
-					<div class="contacts__cell">
-						<h3 class="contacts__title">Телефоны</h3>
-						<p>+7 926 102-68-86</p>
-						<p>+7 926 702-68-86</p>
-					</div>
-					<div class="contacts__cell">
-						<h3 class="contacts__title">E-mail</h3>
-						<p>офис - <a href="mailto:info@kroy-auto.ru" title="">info@kroy-auto.ru</a></p>
-						<p>для дилеров - <a href="mailto:sales@kroy-auto.ru" title="">sales@kroy-auto.ru</a></p>
-					</div>
-				</div>
-			</main>
-		</div>
-	</div>
-
-	<p class="title">КАК К НАМ ПРОЕХАТЬ</p>
-	<div class="map">
-		<div id="ymap"></div>
-	</div>
-	<!-- InstanceEndEditable -->
+	<!-- InstanceBeginEditable name="EditRegion3" -->	<div class="main">		<div class="container">			<main>				<h1 class="title">Контактная информация</h1>				<div class="contacts flexboxw">					<div class="contacts__cell">						<h3 class="contacts__title">Офис</h3>						<p>Московская обл., п. Вёшки, <br> ул. Выставочная 53. Офис 12 </p>					</div>					<div class="contacts__cell">						<h3 class="contacts__title">Производство</h3>						<p>Московская обл., п. Вёшки, <br> ул. Выставочная 53. Офис 14 </p>					</div>					<div class="contacts__cell">						<h3 class="contacts__title">Телефоны</h3>						<p>+7 926 102-68-86</p>						<p>+7 926 702-68-86</p>					</div>					<div class="contacts__cell">						<h3 class="contacts__title">E-mail</h3>						<p>офис - <a href="mailto:info@kroy-auto.ru" title="">info@kroy-auto.ru</a></p>						<p>для дилеров - <a href="mailto:sales@kroy-auto.ru" title="">sales@kroy-auto.ru</a></p>					</div>				</div>			</main>		</div>	</div>	<p class="title">КАК К НАМ ПРОЕХАТЬ</p>	<div class="map">		<div id="ymap"></div>	</div>	<!-- InstanceEndEditable -->
 	<!-- =share -->
 	<div class="share">
 		<div class="container text-center">
@@ -264,46 +237,6 @@
 <script src="/template/js/engine.js"></script>
 <script src="//yastatic.net/share2/share.js"></script>
 
-<!-- InstanceBeginEditable name="EditRegion4" -->
-<script src="http://api-maps.yandex.ru/2.1.26/?lang=ru_RU"></script>
-<script>
-var map;
-var myCollection;	
-ymaps.ready(function () {
-	map = new ymaps.Map('ymap', {
-		center: [55.927447, 37.605095],
-		zoom: 16
-	});
-
-    myPlacemark = new ymaps.Placemark(map.getCenter(), {
-        hintContent: 'Собственный значок метки',
-        balloonContent: 'Это красивая метка'
-    }, {
-        // Опции.
-        // Необходимо указать данный тип макета.
-        iconLayout: 'default#image',
-        // Своё изображение иконки метки.
-        iconImageHref: '/template/images/balloon.png',
-        // Размеры метки.
-        iconImageSize: [69, 86],
-        // Смещение левого верхнего угла иконки относительно
-        // её "ножки" (точки привязки).
-        iconImageOffset: [-30, -86]
-    }),
-
-
-	map.behaviors.disable('scrollZoom'); 
-	map.geoObjects.add(myPlacemark);
-
-	map.events.add('click', function onMapClick(e) {
-		if(map.behaviors.isEnabled('scrollZoom')) {
-			map.events.remove('click', onMapClick);
-		} else {
-			map.behaviors.enable(['scrollZoom']);
-		}
-	});
-})
-</script>
-<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="EditRegion4" --><script src="http://api-maps.yandex.ru/2.1.26/?lang=ru_RU"></script><script>var map;var myCollection;	ymaps.ready(function () {	map = new ymaps.Map('ymap', {		center: [55.927447, 37.605095],		zoom: 16	});    myPlacemark = new ymaps.Placemark(map.getCenter(), {        hintContent: 'Собственный значок метки',        balloonContent: 'Это красивая метка'    }, {        // Опции.        // Необходимо указать данный тип макета.        iconLayout: 'default#image',        // Своё изображение иконки метки.        iconImageHref: '/template/images/balloon.png',        // Размеры метки.        iconImageSize: [69, 86],        // Смещение левого верхнего угла иконки относительно        // её "ножки" (точки привязки).        iconImageOffset: [-30, -86]    }),	map.behaviors.disable('scrollZoom'); 	map.geoObjects.add(myPlacemark);	map.events.add('click', function onMapClick(e) {		if(map.behaviors.isEnabled('scrollZoom')) {			map.events.remove('click', onMapClick);		} else {			map.behaviors.enable(['scrollZoom']);		}	});})</script><!-- InstanceEndEditable -->
 </body>
 <!-- InstanceEnd --></html>
