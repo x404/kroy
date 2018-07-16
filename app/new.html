@@ -101,7 +101,7 @@
 				<div class="callback text-right col-md-3">
 					<div class="callback__inner sq sq-gray">
 						<p><a href="tel:+79261026886" class="tel">+7 926 102-68-86</a></p>
-						<p><a href="#" class="callback">перезвонить?</a></p>
+						<p><a href="#" class="callback" data-toggle="modal" data-target="#callback"><span>перезвонить?</span></a></p>
 					</div>
 				</div>
 				<div class="qcart">
@@ -251,6 +251,40 @@
 	<button type="button" id="totop"><span class="visually-hidden">Вверх</span></button>
 </footer>
 <!-- =/footer -->
+
+<!-- =modal callback -->
+<div class="modal fade" id="callback" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal__body">
+			<p class="title">Напишите ваш номер</p>
+		    			
+		    <form action="/" method="post" class="form-policy" id="callback-form">
+				<fieldset>
+					<label for="cbname" class="visually-hidden">как вас зовут ?</label>
+					<input type="text" id="cbname" name="name" class="form-control required" value="" placeholder="как вас зовут ?" tabindex="0" autofocus /><span class="error"></span>
+		
+					<label for="cbtel" class="visually-hidden">телефон</label>
+					<input type="tel" id="cbtel" name="tel" class="tel form-control required" value="" placeholder="телефон" tabindex="2" /><span class="error"></span>
+					
+					<input type="hidden" name="workemail" value="">
+					<input type="submit" name="callback_submit" class="submit btn" tabindex="3" value="отправить" />
+					<div class="policy">
+						<input type="checkbox" id="cbcheckbox" value="" name="checkbox" checked="checked" class="user-access">
+						<label for="cbcheckbox">Я Согласен на обработку персональных данных и принимаю условия <a href="#" title="" target="_blank">Пользовательского соглашения</a></label>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+		<button type="button" data-dismiss="modal" class="close-modal" aria-label="Закрыть">
+			<svg width="15" height="15">
+				<line x1="0" y1="0" x2="15" y2="15"></line>
+				<line x1="15" y1="0" x2="0" y2="15"></line>
+			</svg>
+		</button>
+	</div>
+</div>
+<!-- =/modal callback -->
+
 
 <div id="outdated"></div>
 

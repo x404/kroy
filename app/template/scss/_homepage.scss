@@ -116,7 +116,7 @@
 		margin-top: -135px;
 		a{
 			color: currentColor;
-			@extend .tdu;
+			@extend .tdn;
 		}
 		.more{
 			font-family: 'PalatinoLinotypeItalic';			
@@ -164,6 +164,37 @@
 .brands{
 	background-color: $color7;
 	padding: 20px 0;
+	.slick-slide{
+		text-align: center;
+		img{
+			display: inline-block;
+		}
+	}
+	.slick{
+		&-arrow{
+			background: url(../images/arrow-blue.png) no-repeat center;
+			height: 31px;
+			width: 17px;
+			top: 15px;
+			margin: 0;
+			transition: .3s filter;
+			filter: grayscale(1) brightness(1.5);
+			&:hover{
+				filter: grayscale(0)
+			}
+		}
+		&-prev{
+			left: -35px;
+		}
+		&-next{
+			right: -35px;
+		}
+	}
+}
+#brands-carousel{
+	margin-left: auto;
+	margin-right: auto;
+	width: 94%;
 }
 /* =/brands
 ---------------------------*/
@@ -446,7 +477,7 @@
 	font-size: 15px;
 	a{
 		color: $color2;
-		@extend .tdu;
+		@extend .tdn;
 	}
 }
 

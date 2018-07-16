@@ -59,6 +59,7 @@ gulp.task('compress', function(){
 				config.libsDir + '/jquery-validation/dist/jquery.validate.js',
 				config.libsDir + '/slick-carousel/slick/slick.min.js',
 				config.templateDir + '/js/util.js',
+				config.templateDir + '/js/modal.js',
 				config.templateDir + '/js/tab.js',
 				config.templateDir + '/js/popper.min.js',
 				config.templateDir + '/js/jquery.fancybox.min.js'

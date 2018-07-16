@@ -110,6 +110,17 @@
 
 @media (max-width: 991px){
 	// homepage
+	.brands{
+		.slick{
+			&-prev{
+				left: -25px;
+			}
+			&-next{
+				right: -25px;
+			}
+		}
+	}
+
 	.reason{
 		.flexbox{
 			display: block;
@@ -250,6 +261,8 @@
 			width: auto;
 		}
 	}
+
+
 }
 
 @media (max-width: 767px){
@@ -434,6 +447,18 @@
 
 
 @media (max-width: 450px){
+	.brands{
+		.slick{
+			&-prev{
+				left: -10px;
+			}
+			&-next{
+				right: -10px;
+			}
+		}
+	}
+
+
 	.homepage{
 		.carousel{
 			display: none;

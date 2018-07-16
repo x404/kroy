@@ -10,6 +10,52 @@ $(document).ready(function(){
 		adaptiveHeight: true
 	});
 
+
+	$('#brands-carousel').slick({
+		slidesToShow: 17,
+		slidesToScroll: 2,
+		prevArrow: '<button type="button" class="slick-prev slick-arrow" aria-label="Назад"></button>',
+		nextArrow: '<button type="button" class="slick-next slick-arrow" aria-label="Вперед"></button>',
+		responsive: [
+		    {
+		      breakpoint: 1399,
+		      settings: {
+		        slidesToShow: 14,
+		        slidesToScroll: 3
+		      }
+		    },
+		    {
+		      breakpoint: 991,
+		      settings: {
+		        slidesToShow: 11,
+		        slidesToScroll: 2
+		      }
+		    },
+		    {
+		      breakpoint: 768,
+		      settings: {
+		        slidesToShow: 9,
+		        slidesToScroll: 2
+		      }
+		    },
+		    {
+		      breakpoint: 650,
+		      settings: {
+		        slidesToShow: 5,
+		        slidesToScroll: 2
+		      }
+		    },
+		    {
+		      breakpoint: 450,
+		      settings: {
+		        slidesToShow: 3,
+		        slidesToScroll: 2
+		      }
+		    }
+		  ]
+	});
+
+
 	// $('#inner-carousel').slick({
 	// 	slidesToShow: 1,
 	// 	slidesToScroll: 1,
@@ -103,7 +149,136 @@ $(document).ready(function(){
 	/*  =/product plus/minus */
 
 
+	// mask
+	$('input.tel').inputmask({
+		mask: '+7(999)999-99-99',
+		showMaskOnHover : false
+	});
+
+
+	$.validator.addMethod("validphone", function(value){
+		if (Inputmask.isValid(value, { mask: '+7(999)999-99-99'})) return true
+		else return false;
+	},"");
+
+
+	var thankcallback = '<div class="thank text-center"><p>В ближайщее время с вами свяжутся наши менеджеры для уточнения всех деталей</p></div>';
+	// validation forms
+	$('#callback-form').validate({
+        rules : {
+            tel:{validphone:true}           
+        },
+		submitHandler: function(form){
+			var strSubmit=$(form).serialize();
+			// $(form).find('fieldset').hide();
+			$(form).append('<div class="sending">Идет отправка ...</div>');
+
+			$.ajax({
+				type: "POST",
+				url: $(form).attr('action'),
+				data: strSubmit,
+				success: function(){
+					document.querySelector('.sending').remove();
+					$(form).append(thankcallback);
+					startClock('callback-form');
+				},
+				error: function(){
+					alert(errorTxt);
+					$(form).find('fieldset').show();
+					$('.sending').remove();
+				}
+			})
+			.fail(function(error){
+				alert(errorTxt);
+			});
+		}
+	});
+
+
+
+	$('#callback-form22').validate({
+        rules : {
+            tel:{validphone:true}           
+        },
+
+		submitHandler: function(form){
+			var strSubmit=$(form).serialize();
+			$(form).find('fieldset').hide();
+			$(form).append('<div class="sending">Идет отправка ...</div>');
+			$.ajax({
+				type: "POST",
+				url: $(form).attr('action'),
+				data: strSubmit,
+				success: function(){
+					$(form).closest('.modal__body').html(thankcallback);
+					startClock('callback-form');
+				},
+				error: function(){
+					alert(errorTxt);
+					$(form).find('fieldset').show();
+					$('.sending').remove();
+				}
+			})
+			.fail(function(error){
+				alert(errorTxt);
+			});
+		}
+	});
+
 });
+
+
+var timer,
+	sec = 3;
+
+
+function showTime(sendform){
+	sec = sec-1;
+	if (sec <=0) {
+		stopClock();
+
+		switch (sendform){
+			case 'callback-form':
+				modal = $("#" + sendform).closest('.modal');
+				modal.modal('hide');
+				modal.find('.thank').remove();
+				modal.find('.form-control, textarea').val('');
+				break;
+			case 'feedback-form':
+				$('.feedback .thank').fadeOut('normal',function(){
+					$('.feedback .thank').remove();
+					$('.feedback .form-control, .feedback textarea').val('');
+					$('.feedback__form fieldset').show();
+				});
+				break;
+			case 'cart-form':
+				$('.cart .thank').fadeOut('normal',function(){
+					$('.cart .thank').remove();
+					// $('.cart .form-control, .cart textarea').val('');
+					// $('.cart__form fieldset').show();
+				});
+				break;	
+			default:
+				modal = $("#" + sendform).closest('.modal');
+				modal.fadeOut('normal',function(){
+					modal.modal('hide');
+				});
+				break;
+		}
+	}
+}
+function stopClock(){
+	window.clearInterval(timer);
+	timer = null;
+	sec = 3;
+}
+
+function startClock(sendform){
+	if (!timer)
+		timer = window.setInterval("showTime('" + sendform + "')",1000);
+}
+
+
 
 // показываем второй  уровень меню
 $(document).on('click', '.o-menu .folder > a, .o-menu .folder > span', function(e){
@@ -131,3 +306,18 @@ $(document).on('click', '.o-menu .folder > a, .o-menu .folder > span', function(
 // }
 // =/card thumbs
 
+
+
+$(function(){
+	$('.policy input').click(function(){
+		var $this = $(this),
+			$submit = $this.closest('.form-policy');
+
+		if ($this.is(':checked')){
+			$submit.find('.input, .form-control, .submit, textarea, input[type=radio]').removeAttr('disabled');
+		} else {
+			$submit.addClass('disabled');
+			$submit.find('.input, .form-control, .submit, textarea, input[type=radio]').attr('disabled', true);
+		}
+	})
+});

@@ -1,4 +1,7 @@
 @media (max-width: 1199px){
+	.modal-dialog {
+		width: 90%;
+	}
 }
 
 @media (max-width: 1024px){
@@ -112,5 +115,16 @@
 
 	.ya-share2__list_direction_horizontal > .ya-share2__item{
 		margin-bottom: 5px !important;
+	}
+
+	.modal-dialog{
+		padding-left: 10px;
+		padding-right: 10px;
+		width: 95%;
+		.title{
+			font-size: 20px;
+			margin-bottom: 25px !important;
+			padding-top: 25px;
+		}
 	}
 }
