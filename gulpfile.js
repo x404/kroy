@@ -80,9 +80,9 @@ gulp.task('clean', function() {
 // отслеживаем изменения
 // в квадратных скобках перечисляются таски, которые должны выполниться до watcher (до запуска сервера)
 gulp.task('watcher', ['browser-sync', 'css-libs', 'compress'], function(){
-	return gulp.watch('app/template/scss/**/*.scss', ['scss', 'css-libs']), // при изменении любого *scss-файла вызываем таск scss
+	return gulp.watch(config.templateDir + '/scss/**/*.scss', ['scss', 'css-libs']), // при изменении любого *scss-файла вызываем таск scss
 		gulp.watch('app/*.html', browserSync.reload),
-		gulp.watch('app/template/js/**/*.js', browserSync.reload)
+		gulp.watch(config.templateDir + '/js/**/*.js', browserSync.reload)
 });
 
 
@@ -116,14 +116,14 @@ gulp.task('sprite-create', ['sprite-clean'], function () {
 
 
 gulp.task('img', function() {
-    return gulp.src('app/template/images/**/*') // Берем все изображения из app
+    return gulp.src(config.templateDir + '/images/**/*') // Берем все изображения из app
         .pipe(cache(imagemin({  // Сжимаем их с наилучшими настройками с учетом кеширования
             interlaced: true,
             progressive: true,
             svgoPlugins: [{removeViewBox: false}],
             use: [pngquant()]
         })))
-        .pipe(gulp.dest('dist/template/images')); // Выгружаем на продакшен
+        .pipe(gulp.dest(config.destDir + '/template/images')); // Выгружаем на продакшен
 });
 
 
@@ -222,19 +222,38 @@ gulp.task('build', ['clean', 'img', 'scss', 'compress'], function(){
 	var buildCss = gulp.src([ // Переносим CSS стили в продакшен
 		config.templateDir + '/css/styles.min.css',
 		config.templateDir + '/css/tiny.css',
-		config.templateDir + '/css/owl.carousel.css'
+		config.templateDir + '/css/cloudzoom.css',
+		config.templateDir + '/css/chosen.css',
+		config.templateDir + '/css/jquery.fancybox.min.css'
 	])
 	.pipe(gulp.dest(config.destDir + '/template/css'));
 
 	var buildFavicon = gulp.src('app/the_favicon/*.*').pipe(gulp.dest(config.destDir + '/the_favicon'));
-	var buildHtml = gulp.src('app/*.html').pipe(gulp.dest(config.destDir + '/'));
-	var buildHtaccess = gulp.src('app/.htaccess').pipe(gulp.dest(config.destDir));
-	var buildrobots = gulp.src('app/robots.txt').pipe(gulp.dest(config.destDir));
-	var buildJs = gulp.src(config.templateDir + '/js/**/*').pipe(gulp.dest(config.destDir + '/template/js'));
-	var buildTmp = gulp.src('app/images/**/*').pipe(gulp.dest(config.destDir + '/images'));
+
+	var buildJs = gulp.src([
+		config.templateDir + '/js/inputmask**/*',
+		config.templateDir + '/js/chosen.jquery.min.js',
+		config.templateDir + '/js/cloudzoom.js',
+		config.templateDir + '/js/engine.js',
+		config.templateDir + '/js/libs.min.js'
+
+		]).pipe(gulp.dest(config.destDir + '/template/js'));
+
+	var buildImages = gulp.src('app/images/**/*').pipe(gulp.dest(config.destDir + '/images'));
+	var buildImages2 = gulp.src([
+		config.templateDir + '/css/ajax-loader.gif',
+		config.templateDir + '/css/chosen-sprite.png',
+		config.templateDir + '/css/chosen-sprite@2x.png',
+		]).pipe(gulp.dest(config.destDir + '/template/css/'));
+
 	var buildTmp = gulp.src('app/tmp/*').pipe(gulp.dest(config.destDir + '/tmp'));
 	var buildFonts = gulp.src(config.templateDir + '/fonts/**/*').pipe(gulp.dest(config.destDir + '/template/fonts')); // Переносим шрифты в продакшен
 	var buildOutdate = gulp.src('app/outdatedbrowser/**/*').pipe(gulp.dest(config.destDir + '/outdatedbrowser'));
+
+
+	var buildHtml = gulp.src('app/*.html').pipe(gulp.dest(config.destDir + '/'));
+	var buildHtaccess = gulp.src('app/.htaccess').pipe(gulp.dest(config.destDir));
+	var buildrobots = gulp.src('app/robots.txt').pipe(gulp.dest(config.destDir));
 
 });
 

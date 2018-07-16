@@ -3,6 +3,10 @@
 		width: 350px;
 	}
 
+	.actions .media__cell{
+		width: 50%;
+	}
+
 	.media__half .media__inner{
 		width: 96%;
 	}
@@ -45,6 +49,10 @@
 
 	.card__gallery{
 		width: 500px;
+	}
+
+	.modal-dialog{
+		margin: 1% auto;
 	}
 }
 
@@ -239,7 +247,10 @@
 
 	.actions .media__cell{
 		margin-bottom: 25px;
+		max-width: 565px;
+		width: auto;
 	}
+
 
 	.carousel{
 		.text{

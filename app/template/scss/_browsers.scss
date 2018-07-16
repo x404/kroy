@@ -15,4 +15,31 @@ _::-webkit-:host:not(:root:root), .header{
 
 //ie11
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	body{
+		display: block;
+	}
+
+	textarea{
+		overflow: hidden;
+	}
+}
+
+.ie10{
+	display: block;
+	.reason .tab-content .right{
+		width: 50%;
+	}
+
+	.card__description{
+		line-height: 1.5;
+		width: 50%;
+	}
+
+	.card__thumbs a{
+		text-decoration: none;
+	}
+
+	textarea{
+		overflow: hidden;
+	}
 }

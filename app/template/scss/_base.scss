@@ -436,10 +436,10 @@ input::-webkit-inner-spin-button {
 			& > a{
 				color: $color3;
 				&:hover{
-					border-bottom: 1px dashed rgba(47,79,142,1);
 				}
 			}
 			&:hover{
+				border-bottom: 1px dashed rgba(47,79,142,1);
 				& > a{
 					color: $color4;
 					text-decoration: none;					

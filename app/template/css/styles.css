@@ -396,11 +396,11 @@ input::-webkit-inner-spin-button {
       white-space: nowrap; }
       .mainnav .nav > li > a {
         color: #808080; }
-        .mainnav .nav > li > a:hover {
-          border-bottom: 1px dashed #2f4f8e; }
-      .mainnav .nav > li:hover > a {
-        color: #2f4f8e;
-        text-decoration: none; }
+      .mainnav .nav > li:hover {
+        border-bottom: 1px dashed #2f4f8e; }
+        .mainnav .nav > li:hover > a {
+          color: #2f4f8e;
+          text-decoration: none; }
       .mainnav .nav > li.active {
         border-bottom: 1px dashed #2f4f8e; }
         .mainnav .nav > li.active > a,
@@ -1299,6 +1299,7 @@ label.error {
   cursor: pointer;
   display: inline-flex;
   font-family: "SegoeUIItalic";
+  font-size: 14px;
   height: 32px;
   justify-content: center;
   text-decoration: none;
@@ -1800,6 +1801,7 @@ main .text a,
     background-image: linear-gradient(to right, #fff 0%, #97a7c6 50%, #97a7c6 51%, #fff 100%);
     top: auto;
     bottom: 0;
+    left: 0;
     height: 1px;
     width: 100%; }
 
@@ -2272,6 +2274,24 @@ tbody.collapse.show {
 ::-ms-clear {
   display: none; }
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  body {
+    display: block; }
+  textarea {
+    overflow: hidden; } }
+
+.ie10 {
+  display: block; }
+  .ie10 .reason .tab-content .right {
+    width: 50%; }
+  .ie10 .card__description {
+    line-height: 1.5;
+    width: 50%; }
+  .ie10 .card__thumbs a {
+    text-decoration: none; }
+  .ie10 textarea {
+    overflow: hidden; }
+
 @media (max-width: 1199px) {
   .modal-dialog {
     width: 90%; } }
@@ -2354,6 +2374,8 @@ tbody.collapse.show {
 @media (max-width: 1399px) {
   .media__inner {
     width: 350px; }
+  .actions .media__cell {
+    width: 50%; }
   .media__half .media__inner {
     width: 96%; }
   .photos .media__cell {
@@ -2376,7 +2398,9 @@ tbody.collapse.show {
   .card .chosen-container {
     margin-bottom: 10px; }
   .card__gallery {
-    width: 500px; } }
+    width: 500px; }
+  .modal-dialog {
+    margin: 1% auto; } }
 
 @media (max-width: 1199px) {
   .mainnav {
@@ -2478,7 +2502,9 @@ tbody.collapse.show {
     .card .nav .btn {
       width: 100%; }
   .actions .media__cell {
-    margin-bottom: 25px; }
+    margin-bottom: 25px;
+    max-width: 565px;
+    width: auto; }
   .carousel .text {
     position: static;
     padding-right: 5px;
