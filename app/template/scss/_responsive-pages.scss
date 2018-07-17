@@ -466,6 +466,21 @@
 }
 
 
+@media (max-width: 480px){
+	.products .chosen-container{
+		margin: 10px;
+	}
+
+	.card__description{
+		.btn{
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}
+
+
 @media (max-width: 450px){
 	.brands{
 		.slick{

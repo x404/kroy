@@ -2,10 +2,15 @@
 	.modal-dialog {
 		width: 90%;
 	}
+
+	.qcart .to-cart,
+	.qcart .count{
+		white-space: nowrap;
+	}
+
+
 }
 
-@media (max-width: 1024px){
-}
 
 @media (max-width: 991px){
 	.header{
@@ -20,6 +25,9 @@
 		.qcart{
 			margin-top: 15px;
 			width: 45%;
+		}
+		.callback{
+
 		}
 	}
 
@@ -55,11 +63,23 @@
 	}
 }
 
-@media (max-width: 550px){
+@media (max-width: 650px){
 	.header{
 		.slogan{
 			padding-left: 0;
+			width: 100%;
 		}
+		.logo{
+			width: 100%;
+		}
+	}
+	.user-access:checked + label:after {
+		padding-top: 5px;
+	}
+}
+
+@media (max-width: 550px){
+	.header{
 		.callback,
 		.qcart{
 			margin-left: 0;
@@ -86,6 +106,20 @@
 
 	#totop{
 		left: 50%;
+	}
+
+	.user-access:checked + label:after {
+		padding-top: 5px;
+	}
+
+	#callback-form{
+		.user-access:checked+label:after{
+			padding-top: 10px;
+		}
+	}
+
+	.modal{
+		top: 3%;
 	}
 }
 
@@ -130,5 +164,18 @@
 
 	.uniform{
 		margin-top: 20px;
+	}
+
+}
+
+
+@media (max-width: 350px){
+	.header{
+		.logo{
+			width: 150px;
+			img{
+				max-width: 100%
+			}
+		}
 	}
 }

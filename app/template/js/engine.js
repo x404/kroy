@@ -165,6 +165,7 @@ $(document).ready(function(){
 	var thankcallback = '<div class="thank text-center"><p>В ближайщее время с вами свяжутся наши менеджеры для уточнения всех деталей</p></div>';
 	var thankfaq = '<div class="thank text-center"><p>Ваш вопрос отправлен</p></div>';
 	var thankreview = '<div class="thank text-center"><p>Ваш отзыв отправлен</p></div>';
+	var errorTxt = 'Форма не отправлена. Попробуйте позже.';
 	// validation forms
 	$('#callback-form').validate({
         rules : {
